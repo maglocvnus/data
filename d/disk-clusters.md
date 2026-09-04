@@ -6,8 +6,13 @@ Disk clustering is a common technique for [performance tuning](../p/performance-
 
 ### The problem
 
+Two tables which are frequently joined in queries.
+
+Each table is stored on a different disk page.
 
 ### The solution
+
+
 
 
 You can speed up certain complex queries involving joins by creating disk clusters, which try to reduce the number of times the DBMS has to read from disk, so as to speed up performance.
