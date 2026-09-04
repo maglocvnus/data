@@ -7,7 +7,7 @@ A relational database `index` is an auxiliary table which:
 
 Indexing a table is the most common technique for [performance tuning](../p/performance-tuning.md) a database (ie. shortening query response times).
 
-## The problem
+### The problem
 
 Take the following base table:
 
@@ -36,7 +36,7 @@ Assuming this table has *N* rows, the number of row lookups a standard sequentia
 
 If the table has millions of rows, this will significant impact query response times, and lead to a diminished user experience. 
 
-## The solution
+### The solution
 
 One obvious solution might seem to keep the base table **sorted** by surname, since we know that searching a sorted list is much faster than searching an unsorted one.
 
@@ -69,25 +69,23 @@ When the database system is processing a query like the following:
 SELECT age FROM table WHERE surname='Garcia'
 ```
 
-It will first of all look up `Garcia` in the surname index and retrieve the base table row number.
+It will first of all look up `Garcia` in the surname index and retrieve the base table row number `7`. It will then go to the base table, directly locate the seventh row without having to look at any other rows, and return the value of the `age` column, ie. `32`.
 
-HERE
+### Notes
 
+The primary key column for a table is automatically indexed. 
+- When a new row is inserted into a table, the database system will first of all check this index to make sure that a row with the same primary key value does not already exist.
 
-When the database system is running a query involving a condition like name = ‘Kate’, the query optimiser will first of all look up ‘Kate’ in the sorted name index (should it exist) to find the location (row number) of the relevant record in the base table. It will then use that row number to directly access the record in the base table, without having to access any other records.
+You should create indices for your table intentionally, because:
+- Indices take up extra disk space (admittedly not so much of an issue nowadays).
+- Indices need to be updated for every write operation on the base tables, lengthening response times for writes.
 
-The primary key column for a table is automatically indexed. When inserting a new row in a table, the database system will first of all check this index to make sure that a row with the same primary key value does not already exist.
+Some rules of thumb:
+- Create indices for columns which come up frequently in queries.
+- Avoid creating indexes on columns that contain *non-discriminatory* data, where there is only a handful of values throughout the entire table (eg. binary/ternary data).
 
-You should create indexes for your table carefully:
-- Indexes take up disk space (not so much of an issue nowadays).
-- Indexes need to be updated for every write operation on the base tables, slowing these down considerably.
-
-You should create additional indexes for columns which are referred to frequently in queries.
-
-You should avoid creating indexes on clumns that contain non-discriminatory data ie. only a handful of values throughout the entire table (eg. binary data like booleans, etc.)
-
-
-mmm
+Sources: 
+- Jon L. Harrington (2016). *Relational Database Design and Implementation*, 4th Edition. O’Reilly. Chapter 8: ‘Database design and performance tuning’.
 
 ----
 
