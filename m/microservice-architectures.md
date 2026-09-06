@@ -1,25 +1,27 @@
 # Microservice architectures
 
-Distributed architectures ? same thing?
-
-components/containers up to systems??
-
-Opposite = monolithic architecture / monolith 
-
-application 
-
-Microservices = applications with loosely coupled components that communicate with each other across a network (ie. TCP/IP?).
-
-A small independent component that implements a single self contained atomic business capability.
-
-Trad monolith = one code-base, one deployment unit, to update one capability you need to redeploy the entire application
-
-Each microservice is owned by an independent team, can be deployed, scaled, updated without impacting other services.
-
-Microservices communicate over APIS, and each has its own database.
+A `microservice architecture` is a distributed software system consisting of small, loosely coupled applications, each of which typically:
+- implements a single, self-contained, atomic business capability
+- is developed and owned by an independent team
+- has its own code base (repository)
+- is independently deployable, scalable and updatable
+- communicates with other applications over a (TCP/IP) network, via a well-defined interface (eg. API, messaging, events)
+- has its own database.
 
 
-Microservices are not containers, though containers are often used to package micro services. Microservices are about **business capability separation**.
+The opposite of a microservice architecture is known as a monolithic architecture.
+- single code base
+- one deployment unit
+- one database
+- to update one capability you need to update the entire application
+
+
+diagram of microservices each containing an interface and a database
+
+
+
+
+
 
 Historical evolution:
 - Distributed applications (1990s) – Network RPC
