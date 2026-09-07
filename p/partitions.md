@@ -4,6 +4,15 @@ A relational database `partition` is ...
 
 Partitioning a table is the most common technique for [performance tuning](performance-tuning.md) a database (ie. shortening query response times).
 
+### The problem
+
+mmm
+
+
+### The solution
+
+mmm
+
 ----
 
 Sources: 
