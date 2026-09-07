@@ -1,12 +1,12 @@
 # Performance tuning
 
-Database `performance tuning` involves tweaking the design of a database to make query response times shorter (ie. decreasing latency). 
-This is one of the most important tasks carried out by a traditional database administrator.
+Database `performance tuning` involves tweaking the design of a database to make query response times shorter (ie. decreasing latency, avoiding bottlenecks), without compromising data integrity. 
+Performance optimisation is one of the most important tasks carried out by a traditional database administrator.
 
-There are three main techniques for performance tuning a relational database:
+There are three main techniques for performance tuning a relational database, by influencing the behaviour of its built-in query optimiser:
 - [indexing](../i/indices.md) a table on a frequently accessed column (or set of columns)
 - [disk clustering](../d/disk-clusters.md) two or more tables that are frequently joined in queries, by ensuring related rows are physically stored together on disk
-- [partitioning](partitions.md) a large table into two or more smaller tables, by row (horizontal partitioning), or by column (vertical partitioning).
+- [partitioning](partitions.md) a large table into two or more smaller tables, either by row (horizontal partitioning), or by column (vertical partitioning).
 
 ----
 
