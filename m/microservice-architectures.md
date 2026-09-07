@@ -82,11 +82,17 @@ This is a dedicated infrastructure layer to handle:
 - internal rate limiting
 - monitoring and observability.
 
-### Strangler fig design pattern
+### Strangler fig migration pattern
 
-migrating from monoliths to microservices
+The <mark>strangler fig</mark> pattern provides a safe incremental approach to migrating from a monolithic architecture to microservices.
 
+This approach gradually replaces monolithic functionality by routing specific endpoints to new microservices, while keeping the monolith operational.
 
+The API gateway plays a crucial role here, intelligently routing requests based on rule you define. 
+
+This allows for phases migration with minimal risk, provides easy rollback capability if issues arise.
+
+----
   
 - circuit breaker pattern
 - event sourcing and CQRS
