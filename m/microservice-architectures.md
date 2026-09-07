@@ -98,13 +98,7 @@ The circuit breaker has three states:
 
 ### Event sourcing and CQRS
 
-An <mark>event log</mark> is an ordered, persistent history of all the events that have happened in a system.
-- usually immutable – append-only
-- corrections are dealt with by appending a new event
-- events are usually date- and time-stamped
-- provides a complete audit trail.
-
-<mark>Event sourcing</mark> is an architectural design pattern that uses an event log as the source of truth from which state is derived.
+<mark>Event sourcing</mark> is an architectural design pattern that uses an [event log](../e/event-logs.md) as the source of truth from which current state is derived.
 
 <mark>Command query responsibility segregation</mark> (CQRS) is an architectural design pattern that separates write and read data models in a system:
 - each can be optimised separately for their specific use cases.
