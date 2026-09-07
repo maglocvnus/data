@@ -39,7 +39,6 @@ If the table has millions of rows, this will significant impact query response t
 ### The solution
 
 One obvious solution might seem to keep the base table **sorted** by surname, since we know that searching a sorted list is much faster than searching an unsorted one.
-
 However, this would make inserting new records (and updating existing surnames) much slower.
 
 The most common solution is to *index* the table on the `surname` column.
@@ -61,7 +60,7 @@ This involves getting the relational database management system to create a new 
 
 This index has the same number of rows as the base table, but only has two columns:
 - the surname column, kept in alphabetical order
-- the row number of the record in the base table.
+- the row number of the relevant record in the base table.
 
 When the database system is processing a query like the following:
 
@@ -71,18 +70,22 @@ SELECT age FROM table WHERE surname='Garcia'
 
 It will first of all look up `Garcia` in the surname index and retrieve the base table row number `7`. It will then go to the base table, directly locate the seventh row without having to look at any other rows, and return the value of the `age` column, ie. `32`.
 
+Given a table of 1000 rows, using an index can reduce the average number of look-ups from 500 down to just 6 for a successful search, and from 100 down to just 10 for an unsuccessful search.
+
 ### Notes
 
 The primary key column for a table is automatically indexed. 
-- When a new row is inserted into a table, the database system will first of all check this index to make sure that a row with the same primary key value does not already exist.
+- When a new row is inserted into a table, the database system will first of all check this index to make sure that a row with the same primary key value does not already exist, thus enforcing uniqueness.
 
 You should create indices for your table intentionally, because:
 - Indices take up extra disk space (admittedly not so much of an issue nowadays).
 - Indices need to be updated for every write operation on the base tables, lengthening response times for writes.
 
 Some rules of thumb:
-- Create indices for columns which come up frequently in queries.
-- Avoid creating indexes on columns that contain *non-discriminatory* data, where there is only a handful of values throughout the entire table (eg. binary/ternary data).
+- Create indices for columns which come up frequently in queries (eg. foreign keys).
+- Avoid creating indexes on columns that contain *non-discriminatory* data, where there is only a handful of values throughout the entire table (eg. binary/ternary data like ‘gender’).
+
+----
 
 Sources: 
 - Jon L. Harrington (2016). *Relational Database Design and Implementation*, 4th Edition. O’Reilly. Chapter 8: ‘Database design and performance tuning’.
