@@ -27,7 +27,7 @@ The historical evolution of distributed software has had three stages:
 - 2000s – *Service Oriented Architectures*, with domain-specific services, centrally governed via an *Enterprise Service Bus* (ESB) for routing, transformation, protocol conversion, orchestration.
 - 2010s – (decentralised) microservices.
 
-### Benefits and challenges
+### Benefits and challenges of microservice architectures
 
 The main **benefits** of microservice architectures over traditional monolithic architectures are:
 - *faster release cycles* – you can redeploy one service without full application redeployment (agility)
@@ -44,7 +44,7 @@ For data architecture specifically:
 - Microservices can eliminate the *shared database bottleneck* of traditional monoliths.
 - But challenges arise concerning *data consistency*, and *transactions* across services.
 
-### API gateways and service meshes
+### Managing microservice architectures using API gateways and service meshes
 
 You can manage **external** connections between your microservice architecture and clients using an <mark>API gateway</mark> as a front-door.
 
