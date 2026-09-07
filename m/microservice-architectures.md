@@ -26,20 +26,19 @@ security is more complex because you need to protect multiple service to service
 
 
 The main benefits of microservice architectures over traditional monolithic architectures are:
-- faster release cycles
-- independent scaling
-- fault/failure isolation
+- faster release cycles – you can redeploy one service without full application redeployment (agility)
+- independent scaling – you can grow hot paths with over-provisioning everything
+- fault/failure isolation – a single service failing does not stop your entire system (resilience).
 
 The main challenges for microservice architectures are:
 - You have to manage the complexity of distributed systems, and need to invest in orchestration platforms (eg. Kubernetes)
 - There is a huge backlog of network connections to protect (exponential perimeter surface growth)
-- services can be ephemeral so you need dynamic service discovery mechanism
+- services can be ephemeral so you need robust dynamic service discovery mechanism
 - you need sophisticated observability with centralised logging, metrics, and distributed tracing
-- 
 
 
-mm
-- decentralised governance
+
+
 
 
 For data architecture specifically:
