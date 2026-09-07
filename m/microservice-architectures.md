@@ -106,7 +106,7 @@ An <mark>event log</mark> is an ordered, persistent history of all the events th
 
 <mark>Event sourcing</mark> is an architectural design pattern that uses an event log as the source of truth from which state is derived.
 
-<mark>Command query responsibility segregation</mark> (CQRS) separates write and read data models in a system:
+<mark>Command query responsibility segregation</mark> (CQRS) is an architectural design pattern that separates write and read data models in a system:
 - each can be optimised separately for their specific use cases.
 
 Event sourcing and CQRS are often used together in a microservice architecture:
