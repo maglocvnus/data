@@ -4,11 +4,11 @@ An `event log` is an ordered, persistent history of all the events that have hap
 
 An event log is generally append-only and hence immutable – corrections are handled by appending a new event.
 
-Events in an event log are typically time-stamped.
+Events in an event log are typically time-stamped, and their event types are usually named using past tense verbs, eg. `PaymentReceived`, `MatchCompleted`.
 
 An event log provides a complete audit trail of changes in a data system.
 
-Event log is used in the [event sourcing](event-sourcing.md) architectural design pattern, as the source of truth from which current state is derived.
+Event logs are used in the [event sourcing](event-sourcing.md) architectural design pattern, as the source of truth from which current state is derived.
 
 ----
 
