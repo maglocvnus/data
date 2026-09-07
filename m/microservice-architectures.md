@@ -10,7 +10,16 @@ A `microservice` architecture is a distributed system consisting of small, loose
 
 In terms of data architecture, each microservice typically has: 
 - its own decentralised *data layer*
-- which includes its own database (eg. SQL, NoSQL, graph databases, data lakes).
+- which includes its own database (eg. ).
+
+This is often known as the *database-per-service* design pattern:
+- You can choose the optimal database technology for each service’s specific needs – SQL, NoSQL, graph databases, data lakes.
+- This is known as <mark>polyglot persistence</mark>.
+- Services can evolve data models independently.
+
+However, this requires sophisticated distributed consistency strategies like:
+- sagas
+- event-driven architectures.
 
 Communication between microservices can be:
 - request-driven (synchronous) eg. via REST APIs
@@ -44,15 +53,22 @@ For data architecture specifically:
 - Microservices can eliminate the *shared database bottleneck* of traditional monoliths.
 - But challenges arise concerning *data consistency*, and *transactions* across services.
 
-### Managing microservice architectures using API gateways and service meshes
+### API gateways
 
-You can manage **external** connections between your microservice architecture and clients using an <mark>API gateway</mark> as a front-door.
+You can manage **external** connections between your microservice architecture and clients using an <mark>API gateway</mark> as a front-door. API gateways are a key design pattern for microservices architectures, that shield the actual APIs inside your service mesh, and offloads common functionality from individual services.
 
-This is a single entry point that sits in from of your microservices and receives requests from external clients and manages:
+This is a single entry point (ingress controller) that sits in from of your microservices and receives requests from external clients and manages:
 - authentication
 - authorisation
-- rate limiting
-- routing to to the appropriate service from a single exposed endpoint.
+- routing to to the appropriate service from a single exposed endpoint, simplifying client interactions.
+
+API gateways can enforce <mark>rate limiting</mark> on requests from outside:
+- controlling the volume of requests a client can make within a given time period
+- protecting your backend resources from overload and abuse
+- supporting strategies like quotas, throttling, burst control
+- improving system stability during traffic spikes.
+
+### Service meshes
 
 You can manage **internal** communications among your microservices using a <mark>service mesh</mark>.
 
@@ -63,16 +79,15 @@ This is a dedicated infrastructure layer to handle:
 - routing
 - load balancing
 - TLS encryption
+- internal rate limiting
 - monitoring and observability.
 
-### Microservices architecture patterns
+### Strangler fig design pattern
+
+migrating from monoliths to microservices
 
 
-mm
-- API gateway pattern
-- database-per-service pattern - polyglot persistence
-- rate-limiting pattern
-- strangler fig pattern
+  
 - circuit breaker pattern
 - event sourcing and CQRS
 - 
