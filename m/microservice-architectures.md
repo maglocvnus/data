@@ -84,21 +84,33 @@ This is a dedicated infrastructure layer to handle:
 
 ### Strangler fig migration pattern
 
-The <mark>strangler fig</mark> pattern provides a safe incremental approach to migrating from a monolithic architecture to microservices.
+The <mark>strangler fig</mark> pattern provides a safe incremental approach to migrating from a monolithic architecture to microservices:
+- gradually replacing monolithic functionality by routing specific endpoints to new microservices, while keeping the monolith operational
+- using the API gateway to intelligently routing requests based on defined rules
+- allowing for phased migration with minimal risk
+- providing easy rollback capability if issues arise.
 
-This approach gradually replaces monolithic functionality by routing specific endpoints to new microservices, while keeping the monolith operational.
+### Circuit breaker pattern
 
-The API gateway plays a crucial role here, intelligently routing requests based on rule you define. 
+The <mark>circuit breaker</mark> pattern prevents cascaded, system-wide failures in distributed systems:
+- failure rates and response times of downstream services are constantly monitored
+- when a threshold is exceeded, the circuit is opened so as to stop forwarding requests to the failing service
+- this enables graceful degradation with fallback strategies, eg. cached responses, default values.
 
-This allows for phases migration with minimal risk, provides easy rollback capability if issues arise.
+The circuit breaker has three states:
+- closed – normal operation
+- open – failure protection
+- half-open – testing recovery.
 
-----
-  
-- circuit breaker pattern
-- event sourcing and CQRS
-- 
+### Event sourcing and CQRS
 
+<mark>Event sourcing</mark> persists every state change as an immutable event log (append-only): 
+- providing a complete audit trail of all system changes.
 
+<mark>Command query responsibility segregation</mark> (CQRS) separates write and read models:
+- allowing each to be optimised separately for their specific use cases.
+
+Together these two design patterns enable complex workflows, temporal queries, and highly scalable read operations through de-normalised read models.
 
 ----
 
