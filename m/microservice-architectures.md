@@ -15,7 +15,10 @@ Communication between microservices can be:
 - request-driven (synchronous) eg. via a REST API
 - event-driven (asynchronous) eg. via a message or event broker.
 
-The main benefits of microservice architectures are:
+Monolithic here?
+
+
+The main benefits of microservice architectures over traditional monolithic architectures are:
 - faster release cycles
 - independent scaling
 - fault/failure isolation
