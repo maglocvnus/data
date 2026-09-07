@@ -10,16 +10,10 @@ A `microservice` architecture is a distributed system consisting of small, loose
 
 In terms of data architecture, each microservice typically has: 
 - its own decentralised *data layer*
-- which includes its own database (eg. ).
-
-This is often known as the *database-per-service* design pattern:
-- You can choose the optimal database technology for each service’s specific needs – SQL, NoSQL, graph databases, data lakes.
-- This is known as <mark>polyglot persistence</mark>.
+- which includes its own dedicated database – known as the *database-per-service* design pattern.
+- You can choose the optimal database technology for each service’s specific needs – SQL, NoSQL, graph databases, data lakes – known as <mark>polyglot persistence</mark>.
 - Services can evolve data models independently.
-
-However, this requires sophisticated distributed consistency strategies like:
-- sagas
-- event-driven architectures.
+- However, this requires sophisticated distributed consistency strategies like *sagas* and *event-driven architectures*.
 
 Communication between microservices can be:
 - request-driven (synchronous) eg. via REST APIs
@@ -104,13 +98,20 @@ The circuit breaker has three states:
 
 ### Event sourcing and CQRS
 
-<mark>Event sourcing</mark> persists every state change as an immutable event log (append-only): 
-- providing a complete audit trail of all system changes.
+An <mark>event log</mark> is an ordered, persistent history of all the events that have happened in a system.
+- usually immutable – append-only
+- corrections are dealt with by appending a new event
+- events are usually date- and time-stamped
+- provides a complete audit trail.
 
-<mark>Command query responsibility segregation</mark> (CQRS) separates write and read models:
-- allowing each to be optimised separately for their specific use cases.
+<mark>Event sourcing</mark> is an architectural design pattern that uses an event log as the source of truth from which state is derived.
 
-Together these two design patterns enable complex workflows, temporal queries, and highly scalable read operations through de-normalised read models.
+<mark>Command query responsibility segregation</mark> (CQRS) separates write and read data models in a system:
+- each can be optimised separately for their specific use cases.
+
+Event sourcing and CQRS are often used together in a microservice architecture:
+- the event log is the authoritative write model
+- separate, conventional, denormalised databases can be used as convenient, highly scalable read models.
 
 ----
 
