@@ -1,6 +1,6 @@
 # Event sourcing
 
-`Event sourcing` is a data architectural design pattern, where [events logs](event-logs.md) are used as the source of truth from which current state is derived.
+`Event sourcing` is a data architectural design pattern, where [event logs](event-logs.md) are used as the source of truth from which current state is derived.
 
 Event sourcing is often used alongside [command query responsibility segregation](../c/CQRS.md) (CQRS):
 - The event log is the authoritative write model.
