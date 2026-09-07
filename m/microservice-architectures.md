@@ -18,6 +18,8 @@ Communication between microservices can be:
 
 Security is complex in a microservice architecture, since you need to protect multiple service-to-service communications, instead of just a single application perimeter.
 
+### From monoliths to microservices
+
 Microservice architectures contrast with traditional *monolithic* applications, where all functionality is bundled into one code base and one deployment unit. Communication within a monolith is generally via direct method/function calls, since all components share the same memory space. In a monolith, scaling is difficult, and changes are risky.
 
 The historical evolution of distributed software has had three stages: 
@@ -63,8 +65,10 @@ This is a dedicated infrastructure layer to handle:
 - TLS encryption
 - monitoring and observability.
 
+### Microservices architecture patterns
 
-Microservices architecture patterns:
+
+mm
 - API gateway pattern
 - database-per-service pattern - polyglot persistence
 - rate-limiting pattern
