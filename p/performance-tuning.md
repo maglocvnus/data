@@ -10,4 +10,9 @@ There are three main techniques for performance tuning a relational database, by
 
 ----
 
+Sources: 
+- Jon L. Harrington (2016). *Relational Database Design and Implementation*, 4th Edition. O’Reilly. Chapter 8: ‘Database design and performance tuning’.
+
+----
+
 Back up to: [Maglocvnus](../index.md)
