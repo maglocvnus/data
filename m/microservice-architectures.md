@@ -98,14 +98,11 @@ The circuit breaker has three states:
 
 ### Event sourcing and CQRS
 
-<mark>Event sourcing</mark> is an architectural design pattern that uses an [event log](../e/event-logs.md) as the source of truth from which current state is derived.
+Microservice architectures often combine two other architectural design patterns:
+- [event sourcing](../e/event-sourcing.md) – [event logs](../e/event-logs.md) are used as the source of truth from which current state is derived
+- [command query responsibility segregation](../c/CQRS.md) (CQRS) – use different, independently optimised data models for writes and reads in the same system.
 
-<mark>Command query responsibility segregation</mark> (CQRS) is an architectural design pattern that separates write and read data models in a system:
-- each can be optimised separately for their specific use cases.
-
-Event sourcing and CQRS are often used together in a microservice architecture:
-- the event log is the authoritative write model
-- separate, conventional, denormalised databases can be used as convenient, highly scalable read models.
+Thus, the event log can serve as the authoritative write model, with derived, conventional, denormalised databases as convenient, highly scalable read models.
 
 ----
 
