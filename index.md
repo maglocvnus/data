@@ -1,5 +1,6 @@
 # Maglocvnus does data
 
+- [API gateways](a/API-gateways.md)
 - [disk clusters](d/disk-clusters.md)
 - [event logs](e/event-logs.md)
 - [event sourcing](e/event-sourcing.md)
