@@ -53,9 +53,7 @@ You can manage **external** connections between your microservice architecture a
 
 You can manage **internal** communications among your microservices using a [service mesh](../s/service-meshes.md). Services meshes provide common services like routing, authentication, authorisation, service discovery, load balancing, mTLS encryption, etc.
 
-### Strangler fig migration pattern
-
-The <mark>strangler fig</mark> pattern provides a safe incremental approach to migrating from a monolithic architecture to microservices:
+The [strangler fig](../s/strangler-fig.md) strategy provides a safe incremental approach to migrating from a monolithic architecture to microservices:
 - gradually replacing monolithic functionality by routing specific endpoints to new microservices, while keeping the monolith operational
 - using the API gateway to intelligently routing requests based on defined rules
 - allowing for phased migration with minimal risk
