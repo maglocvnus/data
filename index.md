@@ -9,6 +9,7 @@
 - [partitions](p/partitions.md)
 - [performance tuning](p/performance-tuning.md)
 - [service meshes](s/service-meshes.md)
+- [strangler fig](s/strangler-fig.md)
 
 
 
