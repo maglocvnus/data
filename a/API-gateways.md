@@ -4,21 +4,14 @@ An `API gateway` is a central entry point that sits between external clients (eg
 
 API gateways are a key design pattern for [microservice architectures](../m/microservice-architectures.md).
 
-
-
-
-This is a single entry point (ingress controller) that sits in from of your microservices and receives requests from external clients and manages:
-- authentication
-- authorisation
-- routing to to the appropriate service from a single exposed endpoint, simplifying client interactions.
-
-API gateways can enforce <mark>rate limiting</mark> on requests from outside:
-- controlling the volume of requests a client can make within a given time period
-- protecting your backend resources from overload and abuse
-- supporting strategies like quotas, throttling, burst control
-- improving system stability during traffic spikes.
-
-
+API gateways provide the following front-door (or ‘reception’) services: 
+- request routing – routes requests to the correct backend service, so that clients only need to know about the gateway
+- authentication and authorisation – verifying identity before forwarding requests, meaning that an individual internal service doesn’t have to validate tokens itself
+- SSL/TLS termination – handling HTTPS encryption and centralising certificate management
+- rate limiting and throttling – protecting services from excessive traffic
+- load balancing – distributing traffic across multiple instances, improving scalability and reliability
+- request and response transformation – modifying requests or responses eg. adding headers, removing sensitive fields, converting formats, aggregating results from multiple services
+- monitoring and logging – collecting request logs, response times, error rates, usage metrics 
 
 ----
 
