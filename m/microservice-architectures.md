@@ -47,7 +47,7 @@ For data architecture specifically:
 - Microservices can eliminate the *shared database bottleneck* of traditional monoliths.
 - But challenges arise concerning *data consistency*, and *transactions* across services.
 
-### Notes
+### Other factors
 
 You can manage **external** connections between your microservice architecture and clients using an [API gateway](../a/API-gateways.md) as a front-door. API gateways are a key design pattern for microservice architectures, shielding your internal APIs, and offloading common functionality from individual services – routing, authentication, encryption, rate limiting, monitoring etc.
 
