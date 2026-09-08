@@ -51,10 +51,9 @@ For data architecture specifically:
 
 You can manage **external** connections between your microservice architecture and clients using an [API gateway](../a/API-gateways.md) as a front-door. API gateways are a key design pattern for microservice architectures, shielding your internal APIs, and offloading common functionality from individual services.
 
+You can manage **internal** communications among your microservices using a [service mesh](../s/service-meshes.md). Services meshes provide
 
-### Service meshes
-
-You can manage **internal** communications among your microservices using a <mark>service mesh</mark>.
+HERE
 
 This is a dedicated infrastructure layer to handle:
 - authentication
