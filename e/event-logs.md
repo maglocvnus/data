@@ -8,7 +8,7 @@ Events in an event log are typically time-stamped, and their event types are usu
 
 An event log provides a complete audit trail of changes in a data system.
 
-Event logs are used in the [event sourcing](event-sourcing.md) architectural design pattern, as the source of truth from which current state is derived.
+Event logs are used in the [event sourcing](event-sourcing.md) architectural design pattern, as the ultimate source of truth from which current state is derived.
 
 ----
 
