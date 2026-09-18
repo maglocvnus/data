@@ -2,23 +2,29 @@
 
 ## What is data governance?
 
-Goal: ensure the trustworthiness (well-governedness) – quality, integrity, security and usability – of your data.
-
-ensure that data is available to all stakeholders in a form that they can access
+The goal of data governance is to ensure that your data is <mark>trustworthy</mark>, in terms of:
+- quality
+  - correct
+  - up-to-date
+  - consistent
+- integrity
+- security
+  - data is only accessed by permitted users in permitted ways
+  - employees should not have access to some data
+  - no improper use
+  - no data breaches
+  - activity is auditable – all accesses and changes are logged
+  - all activity is compliant with regulations
+  - our data systems conform to regulatory standards (industry, government, company-internal)
+- usability
+  - your data is available to everyone who needs it in a form that they can access
+  - stakeholders have a high-quality, integrated view of all the data.
 
 
 ensure that we have the right data to support business decision-making and outcomes
 
-ensure that our data systems conform to regulatory standards (industry, government, company-internal)
 
-stakeholders have a high-quality integrated view of all the data 
 
-high-quality: correct, up-to-date, consistent.
-
-secure:
-- only accessible by permitted users in permitted ways (employees should not have access to some data, no improper use, no data breaches)
-- auditable – all accesses and changes are logged
-- compliant with regulations
 
 ### What data governance involves
 
