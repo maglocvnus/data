@@ -2,12 +2,13 @@
 
 ## What is data governance?
 
-The goal of data governance is to ensure that your data is <mark>trustworthy</mark>, in terms of:
-- quality
-  - correct
-  - up-to-date
-  - consistent
-- integrity
+The goal of data governance is to ensure that your data (and systems, processes) is <mark>trustworthy</mark>, in terms of:
+- accuracy – all data correctly reflects reality
+  - timeliness – all data is sufficiently up-to-date
+  - consistency - there is no conflicting or contradictory data
+- validity/integrity – all data conforms to the data model
+  - completeness – no necessary data is missing
+  - uniqueness – there is no unnecessary duplication
 - security
   - data is only accessed by permitted users in permitted ways
   - employees should not have access to some data
@@ -19,6 +20,7 @@ The goal of data governance is to ensure that your data is <mark>trustworthy</ma
 - usability
   - your data is available to everyone who needs it in a form that they can access
   - stakeholders have a high-quality, integrated view of all the data.
+  - right of its intended purpose (business need)
 
 
 ensure that we have the right data to support business decision-making and outcomes
