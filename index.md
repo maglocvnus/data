@@ -5,6 +5,7 @@
 - [event logs](e/event-logs.md)
 - [event sourcing](e/event-sourcing.md)
 - data [governance](g/governance.md)
+- [data sharing agreements](d/data-sharing-agreements.md)
 - [indices](i/indices.md)
 - [microservice architectures](m/microservice-architectures.md)
 - [partitions](p/partitions.md)
