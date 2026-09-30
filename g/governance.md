@@ -41,7 +41,10 @@ ensure that we have the right data to support business decision-making and outco
 
 ### Why data governance is becoming more important
 
+----
 
+cf.
+- data [stewards](../s/stewards.md)
 
 ----
 
