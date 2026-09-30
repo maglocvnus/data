@@ -1,7 +1,7 @@
 # Data stewards
 
 A `data steward`:
-- owns the strategic and tactical decisions for data within their business domain
+- owns the strategic and tactical decisions ensuring data quality within their business domain
 - serves as a trusted advisor (or SME) to the data architect, able to explain context and nuance
 - is the employee who knows the most about the dataset. 
 
@@ -17,6 +17,9 @@ You can motivate and engage data stewards, by:
 - rewarding their contributions through bonuses, etc.
 - adding stewardship tasks to their ob descriptions
 - helping them understand that having well-stewarded datasets makes other work much easier.
+
+Your data stewards should meet regularly as a `data governance council`.
+
 
 ----
 
