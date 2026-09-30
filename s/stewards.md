@@ -5,7 +5,7 @@ A `data steward`:
 - serves as a trusted advisor (or SME) to the data architect, able to explain context and nuance
 - is the employee who knows the most about the dataset. 
 
-Identifying and appointing data stewards is one of the most important initial steps in establishing enterprise data governance.
+Identifying and appointing data stewards is one of the most important initial steps in establishing enterprise data [governance](../g/governance.md).
 
 Key tasks for a data steward include:
 - helping define metadata attributes for the data in their domains
