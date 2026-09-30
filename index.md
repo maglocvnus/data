@@ -11,6 +11,7 @@
 - [partitions](p/partitions.md)
 - [performance tuning](p/performance-tuning.md)
 - [service meshes](s/service-meshes.md)
+- data [stewards](s/stewards.md)
 - [strangler fig](s/strangler-fig.md)
 
 
