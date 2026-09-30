@@ -7,6 +7,10 @@ A `data steward`:
 
 Identifying and appointing data stewards is one of the most important initial steps in establishing enterprise data governance.
 
+Key tasks:
+
+
+
 ----
 
 Back up to: [Maglocvnus](../index.md)
