@@ -12,7 +12,7 @@ Key tasks for a data steward include:
 - advising on system architecture
 - contributing to data dictionaries.
 
-You can motivating  and engage data stewards, by:
+You can motivate and engage data stewards, by:
 - respecting their time
 - rewarding their contributions through bonuses, etc.
 - adding stewardship tasks to their ob descriptions
