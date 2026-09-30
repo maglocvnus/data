@@ -53,8 +53,12 @@ Lauren Maffeo (creator of LinkedIn Learning course *Designing Data Governance*, 
 2. Formulate a <mark>data governance mission statement</mark>:
   - a 1-2 sentence description of how data will be used to achieve that goal (in terms of people, processes and tools)
   - eg. 'All team leads will have access to all the data they need within Tableau.'
-3. Choose a suitable data governance framework.
+3. Choose a suitable <mark>data governance framework</mark>:
+  - eg. Gartner's framework
 4. Recruit data [stewards](../s/stewards.md) for each business domain, and incorporate them into a data governance council.
+
+
+
 
 
 ----
