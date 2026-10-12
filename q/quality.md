@@ -34,6 +34,22 @@ Note that `NULL` values that are not explicitly `REQUIRED` do not impact on data
 
 The problem of detecting and fixing relation incompleteness can be straightforwardly solved by implementing data integrity controls that explicitly disallow `NULL` values in particular columns.
 
+## Incorrect data
+
+A second important measure of data quality is `accuracy` – the proportion of the relations in the database (non-`NULL` column/cell values) that are what they should be.
+
+### Wrong codes
+
+Relational databases make significant use of <mark>coded data</mark>:
+- codes are defined in master tables and related to records in the main table through primary key / foreign key relationships (eg. two letter abbreviations for US states).
+
+This can lead to inaccuracy, when the database is designed so that when a user wrongly inserts a record containing a mistyped, unrecognised code and the system simply adds it to the master table, without checking.
+
+The solution is to restrict the ability to create new codes, for example to database administrators.
+
+### Wrong calculations
+
+Database records can contain calculated columns values, created on insertion using a formula from other values in the database.
 
 
 
