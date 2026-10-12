@@ -24,27 +24,16 @@ Missing records can be very hard to detect, if their absence doesn’t violate a
 
 Similarly, it can take a lot of time and effort to locate the source of the problem, and in certain cases it may be impossible – packets lost in transit across the internet, customer error, etc.
 
-### NULL cells
+Another source of missing records is where a user tries to insert a new record with an incomplete primary key (eg. one column is missing), and the database rejects the new row. The solution to this kind of problem is to design your tables to have arbitrary primary keys. 
 
-Another important sub-measure of data completeness is `relation completeness` – the proportion of the relations (cell values) that should be there (ie. non-NULL) and actually are.
+### Missing column values
 
+Another important sub-measure of data completeness is `relation completeness` – the proportion of the relations (cell values) that should be there (ie. non-`NULL`) and actually are.
 
+Note that `NULL` values that are not explicitly `REQUIRED` do not impact on data quality – unlike column values that are required but missing.
 
-Missing column data
+The problem of detecting and fixing relation incompleteness can be straightforwardly solved by implementing data integrity controls that explicitly disallow `NULL` values in particular columns.
 
-There are two different types of NULL value that can appear in a table:
-- data that is optional
-- data that is required but missing
-
-This problem can be easily solved by disallowing NULLs in columns that are required (in the data integrity controls).
-
-Missing primary key data
-
-If the database has tight integrity controls, rows with incomplete primary keys will fail to be inserted. 
-
-This means that certain rows will not be inserted, though the data might well be very important for the business.
-
-The solution to this lies in database design — arbitrary primary keys should be used.
 
 
 
