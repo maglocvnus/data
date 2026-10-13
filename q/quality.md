@@ -2,6 +2,7 @@
 
 `Data quality` is a measure of how accurate and up-to-date your business data is.
 
+
 Data quality is important because the reliability of any strategic or operational business decisions is directly proportionate to the quality of the underpinning data – garbage in, garbage out! Bad data leads to the business suffering – lost sales, customer dissatisfaction, etc.
 
 It is much easier to assure data quality **before** it gets into the database.
