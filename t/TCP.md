@@ -3,6 +3,7 @@
 `Transmission Control Protocol` (TCP) is a set of rules for exchanging data **reliably** between two computers across a network, ensuring that the data arrives complete, in the correct order, and without errors.
 
 TCP covers the following networking tasks:
+- how to structure a message (or TCP `segment`)
 - how to establish and close a connection between two computers (a client and a server)
 - how to segment files into smaller pieces
 - sequencing: how to number the pieces so they can be put back together again after transmission 
@@ -12,7 +13,11 @@ TCP covers the following networking tasks:
 - flow control: how to prevent a fast sender from overwhelming a slow receiver
 - congestion control: how to adjust the transmission rate to avoid overloading the network
 
-## Establishing and closing connections
+## Segments
+
+mm
+
+## Connections
 
 TCP mandates the ‘three-way handshake’ as the means of establishing a connection between a client and a server (more specifically between the networking stacks of the operating systems running on the two computers).
 
