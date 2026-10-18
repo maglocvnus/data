@@ -36,6 +36,26 @@ header – source address, destination address, other control info
 
 payload
 
+Maximum size of an IP packet is 65,535 bytes.
+
+However, most are much smaller since the maximum size of a ethernet frame is 1500 bytes.
+
+The standard header size for an IPv4 packet is 20 bytes.
+
+- **version** (8 bits) – IP version, normally 4 for IPv4
+- **IHL**	(8 bits) – header length
+- **DSCP/ECN** (16 bits) – traffic classification and congestion signalling
+- **total length** (32 bits) – size of the complete IP packet, including the header
+- **identification** (32 bits) – helps reassemble fragmented packets
+- **Flags** (8 bits) – controls fragmentation
+- **fragment offset** (24 bits) – position of a fragment in the original packet
+- **TTL** (8 bits) – limits how many routers a packet can traverse
+- **protocol** (8 bits) – identifies the next protocol, such as TCP (6) or UDP (17)
+- **header checksum** (16 bits) – checks for errors in the IPv4 header
+- **source IP** (32 bits) – sender’s IP address
+- **destination IP** (32 bits) – intended recipient’s IP address
+
+
 ## Routing
 
 a computer decides which computer to send a packet to next, based on the ultimate destination IP address
@@ -56,6 +76,12 @@ Two approaches to routing:
 - static routing – configured manually by a network admin
 - dynamic routing – the routing table is continually updated based on feedback from the internet
 
+When a router receives an IP packet, it typically:
+1. Reads the destination IP address.
+2. Consults its routing table to decide where to forward the packet.
+3. Decreases the TTL by one.
+4. Updates the IPv4 header checksum.
+5. Forwards the packet towards its destination.
 
 
 ----
