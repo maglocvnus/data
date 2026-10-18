@@ -2,20 +2,23 @@
 
 The `Transmission Control Protocol` (TCP) is a set of rules governing how data can be exchanged **reliably** between two computers across a network, ensuring that the data arrives complete, in the correct order, and without errors.
 
-TCP covers the following networking tasks:
-- how to structure a message (or TCP `segment`)
-- how to establish and close a connection between two computers (a client and a server)
-- how to segment files into smaller pieces
-- sequencing: how to number the pieces so they can be put back together again after transmission 
-- how to send pieces across a network
-- acknowledgements: how to confirm which pieces have arrived
-- retransmission: how to resend any missing pieces (cf. TCP timers, timeouts?)
-- flow control: how to prevent a fast sender from overwhelming a slow receiver
-- congestion control: how to adjust the transmission rate to avoid overloading the network
+TCP covers the following networking topics:
+- [segments](#segments)
+- [connections](#connections)
+
 
 ## Segments
 
-mm
+A message in TCP is known as a `segment`.
+
+A TCP segment consists of:
+- an obligatory 20-byte **header**, to manage the communication
+- an optional **payload**, typically much larger (eg. 1000 bytes), containing application data.
+
+A TCP segment is embedded within an [IP](../i/IP.md) packet, before being transmitted across the internet.
+
+What does a TCP header look like?
+
 
 ## Connections
 
@@ -44,11 +47,7 @@ This works as follows:
 
 TCP mandates closing an established connection by means of a TCP header segment with the `FIN` flag set to `1`.
 
-Note that <mark>TCP segments</mark> consist of:
-- an obligatory 20-byte **header**, to manage the communication
-- an optional **payload**, typically much larger (eg. 1000 bytes), containing application data.
 
-An <mark>IP packet</mark> consists of a (20-byte) IP header followed by a TCP segment.
 
 need to include source and destination **ports** here: usual server port for TCP is 443
 
@@ -62,6 +61,16 @@ packets
 
 ## Retransmission of missing packets
 
+
+- how to structure a message (or TCP `segment`)
+- how to establish and close a connection between two computers (a client and a server)
+- how to segment files into smaller pieces
+- sequencing: how to number the pieces so they can be put back together again after transmission 
+- how to send pieces across a network
+- acknowledgements: how to confirm which pieces have arrived
+- retransmission: how to resend any missing pieces (cf. TCP timers, timeouts?)
+- flow control: how to prevent a fast sender from overwhelming a slow receiver
+- congestion control: how to adjust the transmission rate to avoid overloading the network
 
 ----
 
