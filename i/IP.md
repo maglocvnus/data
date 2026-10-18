@@ -2,7 +2,7 @@
 
 The `Internet Protocol` (IP) is a set of rules governing how data should be transferred across the internet from one computer to another.
 
-IP is a **best effort** delivery protocol – it attempts to deliver each packet, but makes no promise of success – typically reliability is ensured by embedding a TCP segment within each IP packet.
+IP is a **best effort** delivery protocol – it attempts to deliver each packet, but makes no promise of success. Reliability can be achieved by embedding a [TCP](../t/TCP.md) segment within each IP packet.
 
 ## IP addresses
 
