@@ -8,23 +8,24 @@ IP is a **best effort** delivery protocol – it attempts to deliver each packet
 
 Every computer on the internet has a unique IP address.
 
-Examples:
+An IP address consists of 32 bits, usually represented in dotted decimation notation for readability – four base-10 octets (ie. 0 to 255), separated by dots.
+
+Examples of IP addresses are:
 - `192.168.1.25`
-- `8.8.8.8` (a public IP address used by Googles DNS service)
+- `8.8.8.8`
 
-IPv4 – 32-bit addresses
+What can we tell from an IP address? How to they relate to top level domain names? .gov, .edu, .uk, etc. ??
 
-IPv6 – 128-bit addresses, eg. `2001:db8::1`
+subnet masks?
 
-IPv4:
+### IPv6
 
-typically represented as four octets separated by periods. Each octet represented in base-10 ie. 0 to 255.
+The original IP addresses, discussed above, are nowadays known as IPv4.
 
-ie. dotted decimal notation, for readability
+IPv6 addresses consist of 128 bits, usually represented as four hexadecimal numbers (0 to ??) separated by colons.
 
-IPv6:
-
-- colon separators, dividing four hexadecimal numbers
+For example:
+- `2001:db8::1`
 
 
 
