@@ -1,6 +1,6 @@
 # Transmission Control Protocol
 
-`Transmission Control Protocol` (TCP) is a set of rules for exchanging data **reliably** between two computers across a network, ensuring that the data arrives complete, in the correct order, and without errors.
+The `Transmission Control Protocol` (TCP) is a set of rules governing how data can be exchanged **reliably** between two computers across a network, ensuring that the data arrives complete, in the correct order, and without errors.
 
 TCP covers the following networking tasks:
 - how to structure a message (or TCP `segment`)
