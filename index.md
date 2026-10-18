@@ -7,6 +7,7 @@
 - [event sourcing](e/event-sourcing.md)
 - data [governance](g/governance.md)
 - [indices](i/indices.md)
+- [Internet Protocol](I/IP.md) (IP)
 - [microservice architectures](m/microservice-architectures.md)
 - [partitions](p/partitions.md)
 - [performance tuning](p/performance-tuning.md)
@@ -14,6 +15,7 @@
 - [service meshes](s/service-meshes.md)
 - data [stewards](s/stewards.md)
 - [strangler fig](s/strangler-fig.md)
+- [Transmission Control Protocol](t/TCP.md) (TCP)
 
 
 
