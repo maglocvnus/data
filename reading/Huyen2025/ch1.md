@@ -22,9 +22,21 @@ Autoregressive language models are the models of choice for text generation. The
 
 #### Self-supervision
 
+Language models are particularly scalable because they can be trained using self-supervised learning. The output labels needed for supervised learning do not need to be added (expensively and time-consumingly) by a human, but rather are inferred directly from the training corpus (the ‘next word’).
+
 ### 1.1.2. From large language models to foundation models
 
+**Multimodal models** add additional data modalities to an LLM — images, audio, videos, 3D assets, protein structures, etc.
+
+**Foundation models** are general-purpose models capable of many different tasks.
+
+Some AI engineering techniques for adapting a foundation model to a new task are:
+- **prompt engineering** — craft detailed instructions with examples of the desired output (one-shot or few-shot prompting)
+- **retrieval-augmented generation** (RAG) — supplement the instructions with a database
+- **fine-tuning** — further train the model’s parameters on a more specific dataset.
+
 ### 1.1.3. From foundation models to AI engineering
+
 
 
 ## 1.2. Foundation model use cases
