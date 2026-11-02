@@ -61,7 +61,30 @@ Some AI engineering techniques for adapting a foundation model to a new task are
 
 ## 1.3. Planning AI applications
 
-## 1.4. The emerging AI stack
+## 1.4. The AI engineering stack
+
+AI engineering evolved out of ML engineering.
+- Some companies treat AI engineering as a subtype of ML engineering.
+- Other companies treat AI engineering as a whole new type of job.
+
+### 1.4.1. Three layers of the AI stack
+
+The three layers are:
+- **application development** — providing a pre-trained model with good prompts and necessary context; requires rigorous evaluation and good interfaces
+- **model development** — training and fine-tuning models; inference optimisation; dataset engineering; also requires rigorous evaluation
+- **infrastructure** — model serving; managing data and compute; monitoring.
+
+Many of the principles and techniques of ML engineering are still valid for working with foundation models, especially the importance of **systematic experimentation** — with different models, prompts, retrieval algorithms, sampling variables, etc.
+
+### 1.4.2. AI engineering versus ML engineering
+
+#### Model development
+
+#### Application development
+
+### 1.4.3. AI engineering versus full stack engineering
+
+
 
 
 ---
