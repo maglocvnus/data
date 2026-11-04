@@ -6,6 +6,12 @@ Post-2020, AI has been all about **scale**, with two major consequences:
 
 Demand for AI has increased as the barriers to entry have decreased, leading to the rise of <mark>AI engineering</mark> — the job of building applications on top of readily available AI models.
 
+Contents:
+- 1.1. [The rise of AI engineering](#11-the-rise-of-ai-engineering)
+- 1.2. [Foundation model use cases](#12-foundation-model-use-cases)
+- 1.3. [Planning AI applications](#13-planning-ai-applications)
+- 1.4. [The AI engineering stack](#14-the-ai-engineering-stack)
+
 ## 1.1. The rise of AI engineering
 
 ### 1.1.1. From language models to large language models
@@ -94,6 +100,9 @@ Conversational agents can be highly versatile, for example:
 - smart non-player characters (NPCs) in video games.
 
 ### 1.2.6. Information aggregation
+
+
+
 
 ### 1.2.7. Data organisation
 
