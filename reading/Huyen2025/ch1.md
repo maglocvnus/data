@@ -1,8 +1,8 @@
 # Chapter 1. Introduction to building AI applications with foundation models
 
 Post-2020, AI has been all about **scale**, with two major consequences:
-- AI models are becoming more powerful, capable of more tasks, and enabling more applications.
-- Few organisations can afford to train an LLM, leading to the emergence of **model-as-a-service**.
+- AI models are becoming more powerful, capable of more tasks, enabling more applications, creating more economic value, and improving quality of life. 
+- Few organisations can afford to train a state-of-the-art LLM, leading to the emergence of **model-as-a-service**.
 
 Demand for AI has increased as the barriers to entry have decreased, leading to the rise of <mark>AI engineering</mark> — the job of building applications on top of readily available AI models.
 
@@ -18,7 +18,9 @@ There are two main types of language model:
 
 Masked language models (eg. BERT — bidirectional encoder representations from transformers) are commonly used for non-generative tasks like sentiment analysis and text classification, or code debugging.
 
-Autoregressive language models are the models of choice for text generation. These models are the most widely used, since many different kinds of task can be framed as ‘completion tasks’ — translation, summarisation, coding, solving maths problems, spam classification, etc.
+Autoregressive language models are the models of choice for text generation. These models are the most widely used, since many different kinds of task can be framed as (probabilistic) ‘completion tasks’ — translation, summarisation, coding, solving maths problems, spam classification, etc.
+
+Autoregressive language models are **generative**, since they can generate open-ended outputs from a fixed, finite vocabulary. 
 
 #### Self-supervision
 
