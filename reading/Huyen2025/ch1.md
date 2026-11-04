@@ -34,12 +34,15 @@ Language models are particularly scalable because they can be trained using self
 
 Some AI engineering techniques for adapting a foundation model to a new task are:
 - **prompt engineering** — craft detailed instructions with examples of the desired output (one-shot or few-shot prompting)
-- **retrieval-augmented generation** (RAG) — supplement the instructions with a database
+- **retrieval-augmented generation** (RAG) — supplement the instructions with a database of relevant texts
 - **fine-tuning** — further train the model’s parameters on a more specific dataset.
 
 ### 1.1.3. From foundation models to AI engineering
 
-
+Three factors have led to rapid recent growth of AI engineering:
+- foundation models have improved dramatically in their general-purpose problem-solving capabilities
+- investment in AI has increased exponentially
+- the (API-driven) model-as-a-service approach has lowered the entrance barrier for building AI applications. 
 
 ## 1.2. Foundation model use cases
 
