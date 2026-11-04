@@ -101,25 +101,25 @@ Conversational agents can be highly versatile, for example:
 
 ### 1.2.6. Information aggregation
 
-AI is highly capable at filtering and digesting, distilling, aggregating and summarisng  useful infornation. 
+AI is highly capable at filtering and digesting, distilling, aggregating and summarising  useful information. 
 
-A good example is talk-to-your-docs tools, which allow uou to retrieve information in a concersationsl manner. 
+A good example involves **talk-to-your-docs** tools, which allow you to retrieve information in a conversational manner.
 
 ### 1.2.7. Data organisation
 
-AI can help organise big unstructured or seni-structured data do that it can be searched later. 
+AI can help organise huge collections of unstructured or semi-structured data so that they can be searched later. 
 
-eg. autonatically generating text descriptions of images and cideos 
+For example, AI can automatically generate text descriptions of images and videos.
 
-AI is also very good at abalysing data — generating visualisations, identifying outliers, making predictions and gorecasts. 
+AI is also very good at analysing data — generating visualisations, identifying outliers, making predictions and forecasts. 
 
 ### 1.2.8. Workflow automation
 
-AI can automate repetitivectasks like booking restaurants, requesting refunds, planning trips, filling out forms, lead management, invoicing, managing customer requests. 
+AI can automate repetitive tasks like booking restaurants, requesting refunds, planning trips, filling out forms, lead management, invoicing, managing customer requests. 
 
-Agents are AI tools that can plan and use tools to act ob the outside eorld: look up phobe numbers, make calls, add appointments ntments to your calendar. 
+**Agents** are AI tools that can create **plans**, and use **tools** to act on the outside world — look up phone numbers, place calls, add appointments to your calendar, etc.
 
-AI agents have huge potential yo generate economic vslue. 
+AI agents have huge potential to generate economic value. 
 
 ## 1.3. Planning AI applications
 
@@ -153,11 +153,11 @@ cf. Microsoft’s Crawl-Walk-Run framework:
 #### AI product defensibility
 
 
-### Setting expectations
+### 1.3.2. Setting expectations
 
-### Milestone planning
+### 1.3.3. Milestone planning
 
-### Maintenance
+### 1.3.4. Maintenance
 
 
 
