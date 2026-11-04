@@ -101,14 +101,43 @@ Conversational agents can be highly versatile, for example:
 
 ### 1.2.6. Information aggregation
 
+AI is highly capable at filtering and digesting, distilling, aggregating and summarisng  useful infornation. 
 
-
+A good example is talk-to-your-docs tools, which allow uou to retrieve information in a concersationsl manner. 
 
 ### 1.2.7. Data organisation
 
+AI can help organise big unstructured or seni-structured data do that it can be searched later. 
+
+eg. autonatically generating text descriptions of images and cideos 
+
+AI is also very good at abalysing data — generating visualisations, identifying outliers, making predictions and gorecasts. 
+
 ### 1.2.8. Workflow automation
 
+AI can automate repetitivectasks like booking restaurants, requesting refunds, planning trips, filling out forms, lead management, invoicing, managing customer requests. 
+
+Agents are AI tools that can plan and use tools to act ob the outside eorld: look up phobe numbers, make calls, add appointments ntments to your calendar. 
+
+AI agents have huge potential yo generate economic vslue. 
+
 ## 1.3. Planning AI applications
+
+### Use case evaluation
+
+#### The role of AI and humans in the application
+
+#### AI produxt defensibility
+
+
+### Setting expectations
+
+### Milestone planning
+
+### Maintenance
+
+
+
 
 ## 1.4. The AI engineering stack
 
