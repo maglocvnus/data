@@ -46,17 +46,53 @@ Three factors have led to rapid recent growth of AI engineering:
 
 ## 1.2. Foundation model use cases
 
+Enterprises usually prefer to start by developing lower-risk applications:
+- internal-facing applications rather than external-facing ones
+- closed-end classification tasks, rather than open-ended generative tasks. 
+
 ### 1.2.1. Coding
+
+AI coding tools are by far the most popular use case:
+- code completion tools, like GitHub Copilot
+- screenshot-to-code tools for UI development
+- code translators
+- test and documentation generators
+
+AI is better at some software engineering tasks than others. 
+For example, they appear to be better at front-end development than back-end programming. 
 
 ### 1.2.2. Image and video production
 
+The probabilistic nature of AI means that it excels at creative tasks, like image and video generation and editing. 
+
+AI is often used to generate first drafts and prototypes for human experts to iterate upon (perhaps after user testing).
+
 ### 1.2.3. Writing
 
+AI excels at writing tasks:
+- autocompletion and autocorrection
+- email rewriting and improvement
+- essay writing and customised book generation
+- note-taking
+- search engine optimisation
+
+This can have downsides — AI slop. 
 
 ### 1.2.4. Education
 
+Education use cases include:
+- summarising textbooks
+- personslised lecture plans and learning materials
+- roleplaying in language learning
+- quiz generation 
 
 ### 1.2.5. Conversational bots
+
+Conversational bots are highly versatile:
+- therapists
+- digital companions
+- customer support bots and copilots
+- smart non-player characters in video games
 
 ### 1.2.6. Information aggregation
 
