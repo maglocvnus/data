@@ -124,9 +124,9 @@ AI agents have huge potential to generate economic value.
 ## 1.3. Planning AI applications
 
 Why build an AI application? 
-How should you go about doing it?
+How should you go about building it?
 
-### Use case evaluation
+### 1.3.1. Use case evaluation
 
 Consider the risks and opportunities:
 - If you don’t do this, competitors with AI can make you obsolete. 
@@ -137,12 +137,12 @@ Consider the risks and opportunities:
 
 AI can be used in a product in different ways:
 - critical or complementary — the more critical AI is to the application, the more accurate and reliable the AI part has to be
-- reactive or proactive — a reactive AI feature responds to users’ requests rather than whever there is an opportunity for it
+- reactive or proactive — a reactive AI feature responds to users’ requests rather than whenever there is an opportunity for it
 - dynamic or static — are features updated continually or periodically?
 
 To what extent is there a humsn in yhe loop?
-- the human can choose between several AI generated responses
-- AI handles simple requests, but complex ones sre touted to a human
+- the human can choose between several AI-generated responses
+- AI handles simple requests, but complex ones are routed to a human
 - AI handles everything, with no human intervention 
 
 cf. Microsoft’s Crawl-Walk-Run framework:
