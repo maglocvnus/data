@@ -2,7 +2,7 @@
 
 Post-2020, AI has been all about **scale**, with two major consequences:
 - AI models are becoming more powerful, capable of more tasks, enabling more applications, creating more economic value, and improving quality of life. 
-- Few organisations can afford to train a state-of-the-art LLM, leading to the emergence of **model-as-a-service**.
+- Few organisations can afford to train a state-of-the-art LLM, leading to the emergence of **model-as-a-service** architectures.
 
 Demand for AI has increased as the barriers to entry have decreased, leading to the rise of <mark>AI engineering</mark> — the job of building applications on top of readily available AI models.
 
@@ -46,53 +46,52 @@ Three factors have led to rapid recent growth of AI engineering:
 
 ## 1.2. Foundation model use cases
 
-Enterprises usually prefer to start by developing lower-risk applications:
-- internal-facing applications rather than external-facing ones
+Enterprises usually prefer to start their AI journeys by developing **lower-risk** applications:
+- internal-facing applications (for employees) rather than external-facing ones (for customers)
 - closed-end classification tasks, rather than open-ended generative tasks. 
 
 ### 1.2.1. Coding
 
-AI coding tools are by far the most popular use case:
-- code completion tools, like GitHub Copilot
+AI coding tools are the most popular use case for generative AI, for example:
+- code completion tools (eg. GitHub Copilot)
 - screenshot-to-code tools for UI development
 - code translators
-- test and documentation generators
+- test generators and documentation generators.
 
-AI is better at some software engineering tasks than others. 
-For example, they appear to be better at front-end development than back-end programming. 
+AI tools are better at some software engineering tasks (eg. front-end development) than others (eg. back-end development).
 
 ### 1.2.2. Image and video production
 
 The probabilistic nature of AI means that it excels at creative tasks, like image and video generation and editing. 
 
-AI is often used to generate first drafts and prototypes for human experts to iterate upon (perhaps after user testing).
+AI is often used to generate first drafts and prototypes for human experts to iterate upon (after initial user testing).
 
 ### 1.2.3. Writing
 
-AI excels at writing tasks:
+AI excels at writing tasks, for example:
 - autocompletion and autocorrection
 - email rewriting and improvement
 - essay writing and customised book generation
 - note-taking
-- search engine optimisation
+- search engine optimisation.
 
-This can have downsides — AI slop. 
+This can have downsides though — AI slop. 
 
 ### 1.2.4. Education
 
-Education use cases include:
+Education use cases for AI include:
 - summarising textbooks
-- personslised lecture plans and learning materials
+- personalised lecture plans and learning materials
 - roleplaying in language learning
-- quiz generation 
+- quiz generation.
 
 ### 1.2.5. Conversational bots
 
-Conversational bots are highly versatile:
-- therapists
+Conversational agents can be highly versatile, for example:
+- AI therapists
 - digital companions
-- customer support bots and copilots
-- smart non-player characters in video games
+- customer support assistants
+- smart non-player characters (NPCs) in video games.
 
 ### 1.2.6. Information aggregation
 
