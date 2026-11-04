@@ -123,18 +123,18 @@ AI agents have huge potential to generate economic value.
 
 ## 1.3. Planning AI applications
 
-### Use case evaluation
+### 1.3.1. Use case evaluation
 
 #### The role of AI and humans in the application
 
-#### AI produxt defensibility
+#### AI product defensibility
 
 
-### Setting expectations
+### 1.3.2. Setting expectations
 
-### Milestone planning
+### 1.3.3. Milestone planning
 
-### Maintenance
+### 1.3.4. Maintenance
 
 
 
