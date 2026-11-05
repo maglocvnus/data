@@ -1,4 +1,4 @@
-# 6. RAG and agents
+# Chapter 6. RAG and agents
 
 ## 6.1. RAG
 
@@ -12,30 +12,27 @@
 
 ## 6.2. Agents
 
-The powerful new capabilities of foundation models have opened the door to applications built around intelligent, rational agents — 
-assistants, coworkers, coaches, etc. 
+The powerful new capabilities of foundation models have made possible applications that implement intelligent, rational agents — assistants, coworkers, coaches, etc. 
+
 These agents can create websites, gather data, plan trips, do market research, manage customer accounts, automate data entry, interview candidates, negotiate deals etc. 
-The potential economic value of these agents is enormous. 
+
+Their potential economic value is enormous. 
 
 ### 6.2.1. Agent overview
 
-An agent can both perceive its environment and act upon it. 
+An agent can: 
+- **perceive** its environment
+- **act upon** its environment.
 
-An agent acts upon its environment using tools. 
+AI agents generally interact with their environments using **tools**.
 
-For example, ChatGPT can call tools to search the web, execute Python code, generate images, etc.
+For example, ChatGPT can call its internal tools to search the web, execute Python code, generate images, etc.
 
-A foundation model is the brain of an AI agent — it process the task and feedback from the environment, plans a sequence of actions to achieve this task, and determines whether the task has been accomplished. 
+A foundation model functions as the brain of an AI agent — it interprets both the input task and feedback from the environment, plans a sequence of actions to achieve this task, and then determines whether the task has been accomplished. 
 
-
-
-
-Agents need more powerful models for 2 main reasons:
-- agents need multiple steps to accomplish a task, so mistakes can compound
-- since agents can access tools, the stakes are higher. 
-
-
-
+There are two main reasons why agents have a particular need for more powerful foundation models:
+- Agents needs multiple steps to solve problems, each step can introduce mistakes, and these mistakes will compound; hence better models are needed that make fewer mistakes.
+- Agents can use tools to perform actions in the real world, so the stakes are higher, and tolerance for mistakes is lower.
 
 ### 6.2.2. Tools
 
