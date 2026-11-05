@@ -36,58 +36,50 @@ There are two main reasons why agents have a particular need for more powerful f
 
 ### 6.2.2. Tools
 
-An agent needs to have a tool inventory.
+An agent needs to have a **tool inventory**:
+- **Read-only** tools allow the agent to perceive its environment.
+- **Write-only** tools allow it to act upon its environment. 
 
-Read-only tools allow an agent to perceive its environment. 
-
-Write-only tools allow it to act upon its environment. 
-
-Three categories of tool:
-- knowledge augmentation tools (context construction)
+There are three main categories of tool:
+- knowledge augmentation tools
 - capability extension tools
-- tools that let an agent act on its environment. 
+- write-action tools
 
-#### Knowledge augmentation
+#### Knowledge augmentation tools
 
-Tools that augment a model with your organisations internal processes and information:
-internal people search, inventiry API, slack retriever.
+Knowledge augmentation tools are read-only tools that allow an agent to retrieve additional context from sources such as:
+- organisation-internal databases, document repositories, and APIs
+- public sources, like the web.
 
-Tos that retrieve nformation from public sources, esp the web. 
+These kinds of information retrieval tools prevent a model from becoming **stale**.
 
-Web browsing tools prevent a moddl from growing stale. 
+#### Capability extension tools
 
-#### capability extension
+Capability extension tools are read-only tools that address the inherent limitations of large language models.
 
-tools that address the inherent limitations of LLMs
+Some examples are:
+- arithmetic calculators
+- calendars, time zone and unit converters, translators
+- code interpreters and debuggers.
 
-eg. a calculator (since LLMs are bad at math)
+Some tools allow outputs to be rendered non-textually:
+- text-to-image models, like DALL-E
+- Latex compilers for maths formulas
+- HTML renderers.
 
-calendar, timezone converter, unit converter, translator 
+Other tools allow non-textual input to be captured:
+- image-captioning tools
+- audio transcription tools
+- OCR tools.
 
-code interpreters and debuggers
+#### Write-action tools
 
-text to image models
-eg ChatGPT uses DALL-E
+Write-action tools allow an agent to make changes to its environment.
 
-Latex compilers, HTMl renderers, etc
-
-image captioning tool
-
-audio transcription tool
-
-OCR tool
-
-Tools can significantly boost a model's performance
-
-#### Write actions
-
-SQL executor can update tables
-
-email API can respond to emails
-
-banking APIs can transfer money
-
-But we need to take safety and security seriously. 
+For example:
+- An SQL executor can create new tables, or update or delete existing ones.
+- An email API can send and respond to emails.
+- A banking API can transfer money between accounts.
 
 ### 6.2.3. Planning
 
