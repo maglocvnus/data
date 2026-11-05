@@ -39,6 +39,59 @@ Agents need more powerful models for 2 main reasons:
 
 ### 6.2.2. Tools
 
+An agent needs to have a tool inventory.
+
+Read-only tools allow an agent to perceive its environment. 
+
+Write-only tools allow it to act upon its environment. 
+
+Three categories of tool:
+- knowledge augmentation tools (context construction)
+- capability extension tools
+- tools that let an agent act on its environment. 
+
+#### Knowledge augmentation
+
+Tools that augment a model with your organisations internal processes and information:
+internal people search, inventiry API, slack retriever.
+
+Tos that retrieve nformation from public sources, esp the web. 
+
+Web browsing tools prevent a moddl from growing stale. 
+
+#### capability extension
+
+tools that address the inherent limitations of LLMs
+
+eg. a calculator (since LLMs are bad at math)
+
+calendar, timezone converter, unit converter, translator 
+
+code interpreters and debuggers
+
+text to image models
+eg ChatGPT uses DALL-E
+
+Latex compilers, HTMl renderers, etc
+
+image captioning tool
+
+audio transcription tool
+
+OCR tool
+
+Tools can significantly boost a model's performance
+
+#### Write actions
+
+SQL executor can update tables
+
+email API can respond to emails
+
+banking APIs can transfer money
+
+But we need to take safety and security seriously. 
+
 ### 6.2.3. Planning
 
 ### 6.2.4. Agent failure modes and evaluation
