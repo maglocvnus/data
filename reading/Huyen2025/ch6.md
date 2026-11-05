@@ -94,6 +94,25 @@ But we need to take safety and security seriously.
 
 ### 6.2.3. Planning
 
+#### Planning overview
+
+#### Foundation models as planners
+
+#### Plan generation
+
+#### Function calling
+
+#### Planning granularity
+
+#### Complex plans
+
+#### Reflection and error correction
+
+#### Tool selection
+
+
+
+
 ### 6.2.4. Agent failure modes and evaluation
 
 ## 6.3. Memory
