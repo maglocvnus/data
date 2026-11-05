@@ -83,9 +83,60 @@ For example:
 
 ### 6.2.3. Planning
 
+Complex tasks require planning
+
+creation of a roadmap outlini g the steps needed to accomplish the task
+
+Process:
+- understand the task
+- consider different options to achieve the task
+- choose the most promising one. 
+
+
+
+
 #### Planning overview
 
+Some plans are more efficient than others. 
+
+Therefore, planning should be decoupled from execution. 
+
+Ask the agent to generate a plan. 
+Validate it. (maybe using an AI judge. 
+Then execute it. Or make a fifferent plan. 
+
+ie. a multi agent system
+
+or generate mutiple plans in oarallel and choose the best one
+
+Planning can involve intent classification 
+- what is the user trying to do with this query?
+
+A human can be involved at any stage of the process. 
+
+Summary:
+- plan generation (task decomposition)
+- reflection snd error correction — evaluate the plan
+- execution
+- reflection and error correction - evaluate outcomes of actions, identify an correct mistakes
+
+
+
+
+
+
 #### Foundation models as planners
+
+Are autoregressive foundation models good at planning?
+
+Some people are pessimistic:
+
+Planning is a search problem, often requiring backtracking. 
+
+It is not enough yo ask a model to generate just one plan. 
+
+A foundation model can be part of a planner, along with a search tool and a state tracking system. 
+
 
 #### Plan generation
 
