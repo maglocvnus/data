@@ -5,6 +5,8 @@ Contents:
 - Chapter 2: Understanding foundation models
 - Chapter 3: Evaluation methodology
 - mmm
+- Chapter 6: RAG and agents
+- mmm
 
 ---
 
