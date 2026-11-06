@@ -115,17 +115,65 @@ Therefore, a foundation model should probably be just one component in a multi-a
 
 #### Plan generation
 
-#### Function calling
+The simplest way to turn a model into a plan generator is with prompt engineering.
+- tell the model you want it to create a plan
+- list the available actions
+- give it a few examples of plans
 
-#### Planning granularity
+The more detailed the prompt, the bestter the plan will be. 
 
-#### Complex plans
+#### *Function calling*
+
+Function calling is the part of plan generation where a tool is invoked. 
+
+Two parts to function calling:
+- craste a tool inventory
+- specify the tools an agent can use
+
+
+#### *Planning granularity*
+
+A plan can have different levels of granularity. 
+- quartwr by quarter
+- month by month
+- week by week
+
+Hierarchical planning involves:
+- start by generating a quarter by wuarter plan
+- for each quarter generate a month by month plan
+- for each month, generate a week by week plan
+
+
+
+#### *Complex plans*
+
+Plans are not just sequential but can have a control flow
+- parallel flows
+- conditionsl floows
+- loops
+
+
+
 
 #### Reflection and error correction
 
+Even the best plans need to be constantly evaluated and adjusted to maximise their chance of success. 
+
+Reflectoon and error correction can be fone by a soecialist agent, eg a scorer. 
+
+A common pattern involves interleaving reasoning and action. 
+
+At each step the agent must explain its thinking, take actions, and then anslyse onservations, until the task is considered complete. 
+
+This can be done in a multi agent framework. 
+
+Reflection can be expensive however, requiri g a lot of tokens to be consumed. 
+
 #### Tool selection
 
+Tool selection requires a lot of experimentation to find the optimsl tool inventory for an agent. 
 
+Agents caould also be asked to snalyae their own tool use and then suggest or even build new tools. 
 
 
 ### 6.2.4. Agent failure modes and evaluation
