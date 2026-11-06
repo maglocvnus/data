@@ -115,70 +115,49 @@ Therefore, a foundation model should probably be just one component in a multi-a
 
 #### Plan generation
 
-The simplest way to turn a model into a plan generator is with prompt engineering.
-- tell the model you want it to create a plan
-- list the available actions
-- give it a few examples of plans
+The simplest way to turn a model into a plan generator is with prompt engineering:
+- you tell the model you want it to create a plan
+- you describe the available actions (tools, functions) it can use
+- you give it a few examples of other plans.
 
-The more detailed the prompt, the bestter the plan will be. 
+The more detailed the prompt, the better the generated plan will be.
 
-#### *Function calling*
+***Function calling*** is the aspect of plan generation where a tool is invoked. You create a tool inventory and then specify which tools the agent can use.
 
-Function calling is the part of plan generation where a tool is invoked. 
+A plan can have different levels of ***granularity***:
+- quarter-by-quarter
+- month-by-month
+- week-by-week.
 
-Two parts to function calling:
-- craste a tool inventory
-- specify the tools an agent can use
+**Hierarchical planning** involves:
+- start by generating a quarter-by-quarter plan
+- for each quarter, generate a month-by-month plan
+- for each month, generate a week-by-week plan
 
-
-#### *Planning granularity*
-
-A plan can have different levels of granularity. 
-- quartwr by quarter
-- month by month
-- week by week
-
-Hierarchical planning involves:
-- start by generating a quarter by wuarter plan
-- for each quarter generate a month by month plan
-- for each month, generate a week by week plan
-
-
-
-#### *Complex plans*
-
-Plans are not just sequential but can have a control flow
+***Complex plans*** can have a control flow involving more than just sequential steps, for example:
 - parallel flows
-- conditionsl floows
-- loops
-
-
-
+- conditional flows
+- loops.
 
 #### Reflection and error correction
 
-Even the best plans need to be constantly evaluated and adjusted to maximise their chance of success. 
+Plans need to be constantly evaluated and adjusted to maximise their chance of success, perhaps by using a specialist reflection and error correction agent.
 
-Reflectoon and error correction can be fone by a soecialist agent, eg a scorer. 
+A common agentic pattern involves interleaving reasoning and action:
+- At each step the agent must explain its thinking, take actions, and then analyse observations, until the task is considered complete. 
+- This can be done in a multi-agent framework. 
 
-A common pattern involves interleaving reasoning and action. 
-
-At each step the agent must explain its thinking, take actions, and then anslyse onservations, until the task is considered complete. 
-
-This can be done in a multi agent framework. 
-
-Reflection can be expensive however, requiri g a lot of tokens to be consumed. 
+Reflection can be expensive however, in terms of tokens consumed. 
 
 #### Tool selection
 
-Tool selection requires a lot of experimentation to find the optimsl tool inventory for an agent. 
+Tool selection requires a lot of experimentation to find the optimal tool inventory for an agent. 
 
-Agents caould also be asked to snalyae their own tool use and then suggest or even build new tools. 
-
+Agents can also be made to analyse their own tool use and then suggest and build new tools. 
 
 ### 6.2.4. Agent failure modes and evaluation
 
-To evaluate an agent, identify its failure modes and measure how often each one happens. 
+To evaluate an agent, you should identify its failure modes and then count how often each one happens.
 
 #### Planning failures
 
