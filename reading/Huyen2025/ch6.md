@@ -83,47 +83,27 @@ For example:
 
 ### 6.2.3. Planning
 
-Complex tasks require planning
+Complex tasks require planning — the creation of a roadmap outlining the steps needed to accomplish the task.
 
-creation of a roadmap outlini g the steps needed to accomplish the task
-
-Process:
-- understand the task
-- consider different options to achieve the task
-- choose the most promising one. 
-
-
-
+The planning process can be seen as having three stages:
+1. Understand the task
+2. Consider different options to accomplish the task
+3. Choose the most promising option.
 
 #### Planning overview
 
-Some plans are more efficient than others. 
+Some plans are more efficient than other plans. Therefore, planning itself should be decoupled from execution of the plan:
+1. Generate a plan (task decomposition)
+2. Validate the plan
+3. Execute the plan; otherwise, generate a new plan.
 
-Therefore, planning should be decoupled from execution. 
+Each of these phases can be delegated to a specialist agent, resulting in a **multi-agent** system. 
 
-Ask the agent to generate a plan. 
-Validate it. (maybe using an AI judge. 
-Then execute it. Or make a fifferent plan. 
+Alternatively, you can generate multiple plans **in parallel**, and have an agent choose the best one.
 
-ie. a multi agent system
+The first phase of planning could involve **intent classification** — figuring out what the user is trying to achieve in a prompt (from a finite set of possibilities).
 
-or generate mutiple plans in oarallel and choose the best one
-
-Planning can involve intent classification 
-- what is the user trying to do with this query?
-
-A human can be involved at any stage of the process. 
-
-Summary:
-- plan generation (task decomposition)
-- reflection snd error correction — evaluate the plan
-- execution
-- reflection and error correction - evaluate outcomes of actions, identify an correct mistakes
-
-
-
-
-
+Finally, humans can be involved at any stage of the planning process.
 
 #### Foundation models as planners
 
