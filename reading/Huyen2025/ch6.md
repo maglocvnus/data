@@ -178,6 +178,28 @@ Agents caould also be asked to snalyae their own tool use and then suggest or ev
 
 ### 6.2.4. Agent failure modes and evaluation
 
+To evaluate an agent, identify its failure modes and measure how often each one happens. 
+
+#### Planning failures
+
+Tool use failure:
+- invalid tool - the plan contai s a tool that is not in the agents incentory
+- invalid parameters - a tools is called with the wro g number ir type of parameters
+- incorrect parameter values - the tool is called eith the wrong value
+
+Goal failure: the agent fails to achieve the gosl, maybe by not flowing the constraints. 
+
+Reflection failure: the agent is concinced it has achieved the goal but hasn't
+
+
+
+
+
+#### Tool failures
+
+#### Efficiency
+
+
 ## 6.3. Memory
 
 
