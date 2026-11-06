@@ -107,16 +107,11 @@ Finally, humans can be involved at any stage of the planning process.
 
 #### Foundation models as planners
 
-Are autoregressive foundation models good at planning?
+Some commentators are sceptical about the potential for autoregressive foundation models to generate good plans.
 
-Some people are pessimistic:
+Planning is a search problem, often requiring backtracking, and simple models just work forwards.
 
-Planning is a search problem, often requiring backtracking. 
-
-It is not enough yo ask a model to generate just one plan. 
-
-A foundation model can be part of a planner, along with a search tool and a state tracking system. 
-
+Therefore, a foundation model should probably be just one component in a multi-agent planner, alongside other components like a search tool, a state tracking system, etc.
 
 #### Plan generation
 
