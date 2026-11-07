@@ -96,10 +96,11 @@ There are two basic approaches to routing:
 
 1983: ARPANET officially transitioned from NCP to TCP/IP — the symbolic birth of the modern internet.
 
+1993: Classless Inter-domain Routing (CIDR) introduced to make IP more scalable — allowing more efficient address allocation and routing tables. 
 
+1994: Network Address Translation (NAT) codified in RFC 1631 — a local network can reuse private IPv4 addresses, while sharing a small number of public addresses.
 
-
-
+2017: Standardisation of IPv6.
 
 ----
 
