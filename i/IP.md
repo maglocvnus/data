@@ -43,14 +43,15 @@ An IP header contains the following parts:
 |-|-|-|
 |**version**|0.4|4 bits representing the IP version assumed, normally `0100` for IPv4 or `0110` for IPv6|
 |**internet header length (IHL)**|0.4|4 bits representing the total length of the header, ie. how many 4-byte units (usually `0101`)|
-|**DSCP/ECN**|2|traffic handling and congestion notification|
+|**differentiated services code point (DSCP)**|0.6|6 bits indicating preferred traffic treatment, eg. priority handling for time-sensitive communications|
+|**explicit congestion notification (ECN)**|0.2|2 bits |
 |**total length**|2|number of bytes in the whole packet, including both header and payload|
 |**identification**|2|identifies fragments of the same original packet|
 |**flags**|0.3|3 bits, controls fragmentation|
 |**fragment offset**|1.5|13 bits, fragment offset, position of a fragment in the original packet|
 |**time-to-live (TTL)**|1|limits how far a packet can travel; every traversed router decrements TTL by (at least) one|
 |**protocol**|1|identifies the next protocol, ie. what kind of data does the payload contain; eg. TCP `6`, UDP `17`|
-|**header checksum**|2|checks for errors in the IPv4 header|
+|**header checksum**|2|checks for errors in the header; must be updated whenever TTL is decremented|
 |**source IP**|4|sender’s IP address|
 |**destination IP**|4|intended recipient’s IP address|
 
