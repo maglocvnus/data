@@ -7,7 +7,7 @@
 - [event sourcing](e/event-sourcing.md)
 - data [governance](g/governance.md)
 - [indices](i/indices.md)
-- [Internet Protocol](I/IP.md) (IP)
+- [Internet Protocol](i/IP.md) (IP)
 - [microservice architectures](m/microservice-architectures.md)
 - [partitions](p/partitions.md)
 - [performance tuning](p/performance-tuning.md)
