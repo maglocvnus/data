@@ -25,15 +25,16 @@ Here is an example of an IPv6 address:
 
 There are 2<sup>128</sup> IPv6 addresses, which is around 340 x 10<sup>36</sup>.
 
+## IP packets
 
+An IP packet is the basic unit of data transmitted across the internet.
 
-## Packets
+Each IP packet consists of:
+- an obligatory 20-byte **header**, containing the source and destination IP addresses, along with other metadata
+- an optional **payload** of data, consisting of a TCP segment, a UDP datagram, etc.
 
-A message in IP is known as a `packet`.
+The theoretical maximum size of an IP packet, including both header and payload is 65,535 bytes. However, in practice the maximum size is 1500 bytes, since this is the maximum size of a ethernet frame (and packets are typically embedded in ethernet frames when travelling across local networks).
 
-An IP packet consists of:
-- an obligatory 20-byte header
-- an optional payload.
 
 The header contains the following parts:
 - **version** (8 bits) – IP version, normally 4 for IPv4
@@ -49,9 +50,7 @@ The header contains the following parts:
 - **source IP** (32 bits) – sender’s IP address
 - **destination IP** (32 bits) – intended recipient’s IP address
 
-The maximum size of an IP packet is 65,535 bytes.
 
-However, most are much smaller since the maximum size of a ethernet frame is 1500 bytes, and packets are typically embedded in ethernet frames when travelling across local networks.
 
 ## Routing
 
