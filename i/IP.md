@@ -83,6 +83,11 @@ There are two basic approaches to routing:
 - **static** routing – the touting table is configured manually by a network administrator
 - **dynamic** routing – the routing table is continually updated based on feedback from the internet.
 
+## Some history
+
+
+
+
 ----
 
 Back up to: [Maglocvnus](../index.md)
