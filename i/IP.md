@@ -33,22 +33,26 @@ Each IP packet consists of:
 - an obligatory 20-byte **header**, containing the source and destination IP addresses, along with other metadata
 - an optional **payload** of data, consisting of a TCP segment, a UDP datagram, etc.
 
+Note that the header can be optionally extended to 60 bytes, if needed.
+
 The theoretical maximum size of an IP packet, including both header and payload is 65,535 bytes. However, in practice the maximum size is 1500 bytes, since this is the maximum size of a ethernet frame (and packets are typically embedded in ethernet frames when travelling across local networks).
 
+An IP header contains the following parts:
 
-The header contains the following parts:
-- **version** (8 bits) – IP version, normally 4 for IPv4
-- **IHL**	(8 bits) – header length
-- **DSCP/ECN** (16 bits) – traffic classification and congestion signalling
-- **total length** (32 bits) – size of the complete IP packet, including the header
-- **identification** (32 bits) – helps reassemble fragmented packets
-- **Flags** (8 bits) – controls fragmentation
-- **fragment offset** (24 bits) – position of a fragment in the original packet
-- **time to live (TTL)** (8 bits) – limits how many routers a packet can traverse
-- **protocol** (8 bits) – identifies the next protocol, such as TCP (6) or UDP (17)
-- **header checksum** (16 bits) – checks for errors in the IPv4 header
-- **source IP** (32 bits) – sender’s IP address
-- **destination IP** (32 bits) – intended recipient’s IP address
+|name|bytes|description|
+|-|-|-|
+|**version**|0.4|4 bits representing the IP version assumed, normally `0100` for IPv4 or `0110` for IPv6|
+|**internet header length (IHL)**|0.4|4 bits representing the total length of the header, ie. how many 4-byte units (usually `0101`)|
+|**DSCP/ECN**|2|traffic handling and congestion notification|
+|**total length**|2|number of bytes in the whole packet, including both header and payload|
+|**identification**|2|identifies fragments of the same original packet|
+|**flags**|0.3|3 bits, controls fragmentation|
+|**fragment offset**|1.5|13 bits, fragment offset, position of a fragment in the original packet|
+|**time-to-live (TTL)**|1|limits how far a packet can travel; every traversed router decrements TTL by (at least) one|
+|**protocol**|1|identifies the next protocol, ie. what kind of data does the payload contain; eg. TCP `6`, UDP `17`|
+|**header checksum**|2|checks for errors in the IPv4 header|
+|**source IP**|4|sender’s IP address|
+|**destination IP**|4|intended recipient’s IP address|
 
 
 
