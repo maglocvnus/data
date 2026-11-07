@@ -44,31 +44,38 @@ An IP header contains the following parts:
 |**version**|0.4|4 bits representing the IP version assumed, normally `0100` for IPv4 or `0110` for IPv6|
 |**internet header length (IHL)**|0.4|4 bits representing the total length of the header, ie. how many 4-byte units (usually `0101`)|
 |**differentiated services code point (DSCP)**|0.6|6 bits indicating preferred traffic treatment, eg. priority handling for time-sensitive communications|
-|**explicit congestion notification (ECN)**|0.2|2 bits |
+|**explicit congestion notification (ECN)**|0.2|2 bits indicating if compatible network devices can signal congestion without necessarily dropping packets|
 |**total length**|2|number of bytes in the whole packet, including both header and payload|
-|**identification**|2|identifies fragments of the same original packet|
-|**flags**|0.3|3 bits, controls fragmentation|
-|**fragment offset**|1.5|13 bits, fragment offset, position of a fragment in the original packet|
+|**identification**|2|associates IP fragments belonging to the same original packet|
+|**flags**|0.3|3 bits specifying flags like Don’t Fragment (DF), More Fragments (MF)|
+|**fragment offset**|1.5|13 bits, specifying where the IP fragment belongs in the original payload, measured in units of 8 bytes|
 |**time-to-live (TTL)**|1|limits how far a packet can travel; every traversed router decrements TTL by (at least) one|
 |**protocol**|1|identifies the next protocol, ie. what kind of data does the payload contain; eg. TCP `6`, UDP `17`|
 |**header checksum**|2|checks for errors in the header; must be updated whenever TTL is decremented|
 |**source IP**|4|sender’s IP address|
 |**destination IP**|4|intended recipient’s IP address|
 
+The three fragmentation fields are used in cases where a packet needs to be broken up, for example to traverse an Ethernet network. The original packet can then be reassembled at its destination.
 
+**IPv6** headers are different in some important ways:
+- The header is longer (40 bytes) but simpler.
+- There is no header checksum.
+- Source and destination IP addresses are 16 bytes longer rather than just 4.
+- Routers cannot fragment packets. 
 
-## Routing
+## IP routing
 
-When a router receives an IP packet, it typically:
-1. Reads the destination IP address.
-2. Consults its routing table to decide where to forward the packet.
-3. Decreases the TTL by one. (This stops a packet circulating forever – when the TTL reaches zero, the packet is discarded.)
-4. Updates the IPv4 header checksum.
-5. Forwards the packet towards its destination.
+When an internet router receives an IP packet, it will:
+1. Check that the header is valid.
+2. Read the destination IP address.
+3. Consult its routing table to decide where to forward the packet to next. 
+4. Decrement the TTL by one.
+5. Update the header checksum.
+6. Forward the packet to the next router.
 
-A routing table maps IP network prefixes to outgoing IP addresses.
+A routing table is a decision tree mapping IP network prefixes to outgoing IP addresses.
 
-Network prefixes (or ‘subnets’) are usually written using CIDR notation.
+Network prefixes (or ‘subnets’) are usually written using **CIDR** notation.
 
 For example, the IP prefix `192.168.1.0/24` describes all the IP addresses that come under the first 24 bits of `192.168.1.0`, ie. `192.168.1.0` to `192.168.1.255`.
 
