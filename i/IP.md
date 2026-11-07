@@ -68,22 +68,35 @@ The three fragmentation fields are used in cases where a packet needs to be brok
 When an internet router receives an IP packet, it will:
 1. Check that the header is valid.
 2. Read the destination IP address.
-3. Consult its routing table to decide where to forward the packet to next. 
+3. Consult its routing table to decide which known computer/router to forward the packet to next. 
 4. Decrement the TTL by one.
 5. Update the header checksum.
-6. Forward the packet to the next router.
+6. Forward the packet onwards.
 
-A routing table is a decision tree mapping IP network prefixes to outgoing IP addresses.
+A **routing table** maps IP network prefixes to the IP addresses of other computers the router is connected to. 
 
-Network prefixes (or ‘subnets’) are usually written using **CIDR** notation.
-
-For example, the IP prefix `192.168.1.0/24` describes all the IP addresses that come under the first 24 bits of `192.168.1.0`, ie. `192.168.1.0` to `192.168.1.255`.
+Network prefixes (or ‘subnets’) are usually written using **CIDR** notation, for example:
+- `192.168.1.0/24` includes `192.168.1.0` to `192.168.1.255`
+- `192.168.0.0/16` includes `192.168.0.0` to `192.168.255.255`
+- `0.0.0.0/0` includes all IPv4 addresses — the default option.
 
 There are two basic approaches to routing:
-- **static** routing – the touting table is configured manually by a network administrator
-- **dynamic** routing – the routing table is continually updated based on feedback from the internet.
+- **static routing** – the routing table is configured manually by a network administrator
+- **dynamic routing** – the routing table is continually updated based on feedback from the internet.
 
 ## Some history
+
+1969: The first four nodes of ARPANET used packet switching (rather than the traditional circuit switching) to exchange data, using Network Control Protocol (NCP).
+
+1974: Robert Kahn and Vint Cerf proposed a new, common protocol for ‘internetworking’, that would work across different types of network. This protocol appeared as RFC 675, and included both IP packet switching and TCP reliability mechanisms.
+
+1978: Vint Cerf, Jon Postel and Danny Cohen proposed splitting up TCP and IP into separate protocols, essentially making the reliability mechanisms optional. This was a hugely significant moment in internet history. 
+
+1981: Jon Postel published RFC 791, codifying IPv4.
+
+1983: ARPANET officially transitioned from NCP to TCP/IP — the symbolic birth of the modern internet.
+
+
 
 
 
