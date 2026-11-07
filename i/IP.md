@@ -2,26 +2,30 @@
 
 The `Internet Protocol` (IP) is a set of rules governing how data should be transferred across the internet from one computer to another.
 
-IP is a **best effort** delivery protocol – it attempts to deliver each packet, but makes no promise of success. Reliability can be achieved by embedding a [TCP](../t/TCP.md) segment within each IP packet.
+IP is a **best effort** delivery protocol – it attempts to deliver each packet of data, but makes no promise of success. Reliability can be achieved by embedding a [TCP](../t/TCP.md) segment within each IP packet.
 
-## Addresses
+## IP addresses
 
 Every computer on the internet has a unique IP address.
 
-An IP address consists of 32 bits, usually represented in dotted decimation notation for readability – four base-10 octets (ie. 0 to 255), separated by dots.
+An IP address consists of 32 bits, usually represented in dotted decimal notation for readability – four base-10 octets (ie. 0 to 255), separated by dots.
 
 Examples of IP addresses are:
 - `192.168.1.25`
 - `8.8.8.8`
 
-### IPv6
+There are 2<sup>32</sup> IP addresses, just under 4.3 billion. Not all of these are available for public Internet use, however, with some being reserved for special purposes. For example, addresses starting with `192.168.*.*` are reserved for private networks. 
 
-The original IP addresses, discussed above, are nowadays known as IPv4.
+These original IP addresses are nowadays known as **IPv4** addresses.
 
-IPv6 addresses consist of 128 bits, usually represented as four hexadecimal numbers (`0` to `FFFFFFFF`) separated by colons.
+**IPv6** addresses consist of 128 bits, usually represented as four hexadecimal numbers (`0` to `FFFFFFFF`) separated by colons.
 
-For example:
-- `2001:db8::1`
+Here is an example of an IPv6 address:
+- `2001:db8:85a3:0000:0000:8a2e:0370:7334`
+
+There are 2<sup>128</sup> IPv6 addresses, which is around 340 x 10<sup>36</sup>.
+
+
 
 ## Packets
 
