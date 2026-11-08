@@ -1,13 +1,14 @@
 # Transmission Control Protocol
 
-The `Transmission Control Protocol` (TCP) is a set of rules governing how data can be exchanged **reliably** between two computers across a network, ensuring that the data arrives complete, in the correct order, and without errors.
+The `Transmission Control Protocol` (TCP) is a set of rules governing how data can be transferred **reliably** across the internet from one computer to another, ensuring that the data arrives complete, in the correct order, and without errors.
 
-TCP covers the following networking topics:
-- [segments](#segments)
+TCP works on top of the [Internet Protocol](../i/IP.md) (IP). Before a TCP segment can be sent across the internet, it needs to be embedded in an IP packet as the data payload. The segment can then be unpacked and reassembled with its siblings after it has reached its destination.
+
+Contents:
+- [TCP segments](#tcp-segments)
 - [connections](#connections)
 
-
-## Segments
+## TCP segments
 
 A message in TCP is known as a `segment`.
 
