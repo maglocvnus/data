@@ -13,12 +13,30 @@ Contents:
 A segment is the basic unit of communication in TCP.
 
 Each TCP segment consists of:
-- an obligatory 20-byte **header**, containing …
+- an obligatory 20-byte **header**, containing source and destination ports, sequence number, etc.
 - an optional **payload**, consisting of (potentially encrypted) application data.
 
-maximum size?
+maximum size? payload usually has a max of 1460 bytes coz of Ethernet frames
 
 What does a TCP header look like?
+
+source port
+
+destination port
+
+sequence number
+
+acknowledgement number
+
+flags
+
+window size
+
+checksum
+
+
+
+
 
 
 ## Connections
