@@ -10,13 +10,13 @@ Contents:
 
 ## TCP segments
 
-A message in TCP is known as a `segment`.
+A segment is the basic unit of communication in TCP.
 
-A TCP segment consists of:
-- an obligatory 20-byte **header**, to manage the communication
-- an optional **payload**, typically much larger (eg. 1000 bytes), containing application data.
+Each TCP segment consists of:
+- an obligatory 20-byte **header**, containing …
+- an optional **payload**, consisting of (potentially encrypted) application data.
 
-A TCP segment is embedded within an [IP](../i/IP.md) packet, before being transmitted across the internet.
+maximum size?
 
 What does a TCP header look like?
 
