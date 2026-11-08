@@ -18,21 +18,30 @@ Each TCP segment consists of:
 
 maximum size? payload usually has a max of 1460 bytes coz of Ethernet frames
 
-What does a TCP header look like?
+A TCP header contains the following parts:
 
-source port
+|name|bytes|description|
+|-|-|-|
+|**source port**|2|a 16-bit unsigned integer representing an application endpoint|
+|**destination port**|2|ditto|
+|**sequence number**|4|the byte position where the payload begins|
+|**acknowledgement number**|4|the expected next sequence number|
+|**data offset**|0.7|the length of the TCP header in units of 4 bytes|
+|**flags**|1.1|see below|
+|**window size**|2|how many additional bytes the receiver is currently prepared to accept|
+|**checksum**|2|checks for errors in the header|
+|**urgent pointer**|2|only meaningful when the URG flag is set; rarely used|
 
-destination port
-
-sequence number
-
-acknowledgement number
-
-flags
-
-window size
-
-checksum
+The nine flag bits are as follows:
+- `SYN`
+- `ACK`
+- `FIN`
+- RST
+- PSH
+- URG
+- ECE
+- CWR
+- NS
 
 
 
