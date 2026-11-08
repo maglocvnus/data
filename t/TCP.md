@@ -6,7 +6,7 @@ TCP works on top of the [Internet Protocol](../i/IP.md) (IP). Before a TCP segme
 
 Contents:
 - [TCP segments](#tcp-segments)
-- [connections](#connections)
+- [the TCP handshake](#the-tcp-handshake)
 
 ## TCP segments
 
@@ -44,11 +44,15 @@ The nine flag bits are as follows:
 - NS
 
 
+## The TCP handshake
+
+Before a (client) computer can start exchanging data with a (server) computer, it needs to successfully establish a connection. This is done using a **three-way handshake**:
+1. `SYN`: The client sends an introductory segment to the server, containing its initial sequence number — «Hello! Can we talk?»
+2. `ACK-SYN`: The server responds with a segment containing its own initial sequence number — «Yes, I can hear you. Can you hear me?»
+3. `ACK`: The client responds in the affirmative — «Yes, I can hear you too.»
 
 
 
-
-## Connections
 
 TCP mandates the ‘three-way handshake’ as the means of establishing a connection between a client and a server (more specifically between the networking stacks of the operating systems running on the two computers).
 
