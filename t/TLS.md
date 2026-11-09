@@ -1,6 +1,27 @@
 # Transport Layer Security
 
-`Transport Layer Security` (TLS) is a set of rules governing how data can be transferred in a private and trustworthy manner across the internet from one computer to another.
+`Transport Layer Security` (TLS) is a set of rules governing how data can be transferred **privately** and **securely** across the internet from one computer to another, ensuring that it cannot be intercepted and eavesdropped into by malicious actors en route. 
+
+TLS works on top of other protocols like the Transport Control Protocol (TCP) and the Internet Protocol (IP). Before being sent across the internet, encrypted data is usually embedded inside TCP segments as data payload, with each segment then packaged up into an IP packet.
+
+## basics
+
+client wants to send some application data to a specific port on a remote computer 
+
+1. do a TCP handshake, establishing a connection between client and server
+2. do a TLS handshake, checking the server credentials and agreeing on an encryption key
+3. client encrypts the application data using the encryption key
+4. client organises the encrypted data into a sequence of TCP segments
+5. client packages each segment into an IP packet and sends each one across the internet, in the general direction of the server.
+
+6. Server unpacks each packet, processes the TCP header, reassembles the whole encrypted data stream, then decrypts it and processes it.
+
+When server is ready to respond it performs the same steps. 
+
+
+
+
+
 
 1. Client: Here is my certificate proving who I am
 2. Server: I trust the organisation that issued that certificate
