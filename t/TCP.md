@@ -43,6 +43,7 @@ The nine flag bits are as follows:
 - CWR
 - NS
 
+Back up to: [Top](#)
 
 ## The TCP handshake
 
@@ -53,7 +54,7 @@ Before a (client) computer can start exchanging data with a (server) computer, i
 
 Once the handshake is complete, the client can start sending application data to the server.
 
-### SYN
+### 1. SYN
 
 At the start, the client’s internal TCP state is `closed`, and the server’s is `listen`.
 
@@ -69,7 +70,7 @@ Thirdly, the client transmits this IP packet across the internet, in the general
 
 Fourthly, the client changes its internal TCP state from `closed` to `syn-sent` — it has carried out the first step in the three-way handshake, and is awaiting a response from the server.
 
-### ACK-SYN
+### 2. ACK-SYN
 
 Whenever an IP packet arrives at the server, it leaps into action.
 
@@ -90,7 +91,7 @@ Fifthly, the server transmits this IP packet across the internet, in the general
 
 Sixthly, the server changes its internal TCP state from `listen` to `syn-received` — it has carried out the second step in the three-way handshake, and is now awaiting a response from the client. 
 
-### ACK
+### 3. ACK
 
 Whenever an IP packet arrives at the client, it leaps into action.
 
@@ -112,6 +113,8 @@ Fifthly, the client transmits this IP packet across the internet, in the general
 Sixthly, the client changes its internal TCP state from `syn-sent` to `established` — it has carried out the final step in the three-way handshake.
 
 When the server receives this TCP segment, it also updates its internal state from `syn-received` to `established`.
+
+Back up to: [Top](#)
 
 ## Data segmentation
 
