@@ -64,7 +64,7 @@ Firstly, the client constructs a (20-byte, payload-free) TCP segment, with:
 
 Secondly, the client packages this TCP segment as the payload of an IP packet, whose header specifies the IP addresses of both client and server.
 
-Thirdly, the client transmits this IP packet across the internet.
+Thirdly, the client transmits this IP packet across the internet, in the general direction of the server.
 
 Fourthly, the client changes its internal TCP state from `closed` to `syn-sent`.
 
