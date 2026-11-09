@@ -63,7 +63,7 @@ Firstly, the client constructs a (20-byte, payload-free) TCP segment, with:
 - the ‘sequence number’ set to some initial 32-bit integer, eg. `1000`
 - the source and destination ports identified.
 
-Secondly, the client packages this TCP segment as the payload of an IP packet, whose header specifies the IP addresses of both client and server.
+Secondly, the client packages this TCP segment as the payload of a new IP packet, whose header specifies the IP addresses of both client and server.
 
 Thirdly, the client transmits this IP packet across the internet, in the general direction of the server.
 
@@ -84,11 +84,11 @@ Thirdly, the server constructs a (20-byte, payload-free) TCP segment, with:
   - the ‘acknowledgement number’ set to the client’s next sequence number, ie. `1001`
   - the source and destination ports switched around.
 
-Fourthly, mmm
+Fourthly, the server packages this TCP segment up as the payload of a new IP packet, with the IP addresses switched around in the header.
 
+Fifthly, the server transmits this IP packet across the internet, in the general direction of the client. 
 
-4. The server OS sends an IP packet containing this TCP segment back to the client — *This is segment 5000, I am happy to talk to you, and I expect your next segment to be 1001.*
-5. The server OS changes its internal state from `listen` to `syn-received`.
+Sixthly, the server changes its internal TCP state from `listen` to `syn-received` — it has carried out the second step in the three-way handshake, and is now awaiting a response from the client. 
 
 ### ACK
 
