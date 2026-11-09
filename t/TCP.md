@@ -51,6 +51,8 @@ Before a (client) computer can start exchanging data with a (server) computer, i
 2. `ACK-SYN`: The server responds with a segment containing its own initial sequence number — «Yes, I can hear you. Can you hear me?»
 3. `ACK`: The client responds in the affirmative — «Yes, I can hear you too.»
 
+Once the handshake is complete, the client can start sending application data to the server.
+
 ### SYN
 
 At the start, the client’s internal TCP state is `closed`, and the server’s is `listen`.
