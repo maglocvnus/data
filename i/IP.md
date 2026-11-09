@@ -84,6 +84,11 @@ There are two basic approaches to routing:
 - **static routing** – the routing table is configured manually by a network administrator
 - **dynamic routing** – the routing table is continually updated based on feedback from the internet.
 
+Questions:
+- Can the same IP packet arrive twice?
+- Can a router forward the same IP packet in two different directions?
+
+
 ## Some history
 
 1969: The first four nodes of ARPANET used packet switching (rather than the traditional circuit switching) to exchange data, using Network Control Protocol (NCP).
