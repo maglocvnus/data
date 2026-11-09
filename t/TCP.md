@@ -59,7 +59,7 @@ At the start, the client’s internal TCP state is `closed`, and the server’s 
 
 Firstly, the client constructs a (20-byte, payload-free) TCP segment, with:
 - the `SYN` flag set to `1`, to request a sequence number synchronisation
-- other flags, in particular `ACK`, set to `0`
+- other flags, in particular `ACK`, are set to `0`
 - the ‘sequence number’ set to some initial 32-bit integer, eg. `1000`
 - the source and destination ports identified.
 
@@ -71,18 +71,18 @@ Fourthly, the client changes its internal TCP state from `closed` to `syn-sent` 
 
 ### ACK-SYN
 
-Whenever an IP packet arrives at its destination, the server leaps into action.
+Whenever an IP packet arrives at the server, it leaps into action.
 
 Firstly, the server takes a note of the client’s IP address in the IP header, and extracts the TCP segment from the packet’s payload. 
 
-Secondly, the server takes a note of the source and destination port numbers in the TCP header, identifies the segment as a SYN request, and takes a note of the client’s initial sequence number.
+Secondly, the server takes a note of the source and destination port numbers in the TCP header, identifies the segment as a `SYN` request, and takes a note of the client’s initial `sequence number`.
 
 Thirdly, the server constructs a (20-byte, payload-free) TCP segment, with:
-  - the `ACK` flag set to `1`, acknowledging receipt of the client’s synchronisation request
-  - the `SYN` flag set to `1`, initiating that the server is making its own synchronisation request
-  - the `sequence number` set to some initial 32-bit integer, eg. `5000`
-  - the ‘acknowledgement number’ set to the client’s next sequence number, ie. `1001`
-  - the source and destination ports switched around.
+- the `ACK` flag set to `1`, acknowledging receipt of the client’s synchronisation request
+- the `SYN` flag set to `1`, initiating that the server is making its own synchronisation request
+- the `sequence number` set to some initial 32-bit integer, eg. `5000`
+- the ‘acknowledgement number’ set to the client’s next sequence number, ie. `1001`
+- the source and destination ports are switched around.
 
 Fourthly, the server packages this TCP segment up as the payload of a new IP packet, with the IP addresses switched around in the header.
 
@@ -92,10 +92,20 @@ Sixthly, the server changes its internal TCP state from `listen` to `syn-receive
 
 ### ACK
 
-6. In response, the client OS constructs a (payload-free) TCP segment, with:
-  - the `ACK` flag set to `1` (ie. acknowledging receipt of the server’s synchronisation request)
-  - the sequence number set to `1001`
-  - the acknowledgement number set to `5001`.
+Whenever an IP packet arrives at the client, it leaps into action.
+
+Firstly, the client takes a note of the server’s IP address in the IP header, and extracts the TCP segment from the packet’s payload. 
+
+Secondly, the client takes a note of the source and destination port numbers in the TCP header, identifies the segment as an `ACK-SYN` request, and takes a note of the server’s initial `sequence number`, and also the `acknowledgement number` (checking that this matches its own expectation?).
+
+Thirdly, the client constructs a (20-byte, payload-free) TCP segment, where:
+- the `ACK` flag set to `1`, acknowledging receipt of the server’s synchronisation request
+- other flags, in particular `SYN`, are set to `0`
+- the `sequence number` is set to the server’s `acknowledgement number`, eg. `1001`
+- the `acknowledgement number` is incremented to the expected value, eg. `5001`
+- the source and destination ports are switched around.
+ 
+Fourthly,
 7. The client OS sends an IP packet containing this TCP segment back to the server — *This is segment 1001, and I expect your next segment to be 5001.*
 8. The client OS changes its internal state from `syn-sent` to `established`.
 9. In response, the server OS changes its internal state from `syn-received` to `established`.
