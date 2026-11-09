@@ -61,7 +61,7 @@ Firstly, the client constructs a (20-byte, payload-free) TCP segment, with:
 - the `SYN` flag set to `1`, to request a sequence number synchronisation
 - other flags, in particular `ACK`, are set to `0`
 - the ‘sequence number’ set to some initial 32-bit integer, eg. `1000`
-- the source and destination ports identified.
+- the source and destination ports identified (usually `443` for the latter).
 
 Secondly, the client packages this TCP segment as the payload of a new IP packet, whose header specifies the IP addresses of both client and server.
 
@@ -104,21 +104,14 @@ Thirdly, the client constructs a (20-byte, payload-free) TCP segment, where:
 - the `sequence number` is set to the server’s `acknowledgement number`, eg. `1001`
 - the `acknowledgement number` is incremented to the expected value, eg. `5001`
 - the source and destination ports are switched around.
- 
-Fourthly,
-7. The client OS sends an IP packet containing this TCP segment back to the server — *This is segment 1001, and I expect your next segment to be 5001.*
-8. The client OS changes its internal state from `syn-sent` to `established`.
-9. In response, the server OS changes its internal state from `syn-received` to `established`.
 
+Fourthly, the client packages this TCP segment up as the payload of a new IP packet, with the IP addresses switched around in the header.
 
+Fifthly, the client transmits this IP packet across the internet, in the general direction of the server.
 
+Sixthly, the client changes its internal TCP state from `syn-sent` to `established` — it has carried out the final step in the three-way handshake.
 
-TCP mandates closing an established connection by means of a TCP header segment with the `FIN` flag set to `1`.
-
-
-
-need to include source and destination **ports** here: usual server port for TCP is 443
-
+When the server receives this TCP segment, it also updates its internal state from `syn-received` to `established`.
 
 ## Data segmentation
 
