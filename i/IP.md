@@ -84,10 +84,7 @@ There are two basic approaches to routing:
 - **static routing** – the routing table is configured manually by a network administrator
 - **dynamic routing** – the routing table is continually updated based on feedback from the internet.
 
-Questions:
-- Can the same IP packet arrive twice?
-- Can a router forward the same IP packet in two different directions?
-
+Note that the same IP packet may arrive twice or more at its intended destination. This **packet duplication** can be caused by network faults or by routing behaviour (eg. deliberate replication).
 
 ## Some history
 
