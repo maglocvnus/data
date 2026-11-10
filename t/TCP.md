@@ -16,7 +16,7 @@ Each TCP segment consists of:
 - an obligatory 20-byte **header**, containing source and destination ports, sequence number, etc.
 - an optional **payload**, consisting of (potentially encrypted) application data.
 
-maximum size? payload usually has a max of 1460 bytes coz of Ethernet frames
+In practice, the maximum size of the payload is 1460 bytes, allowing both a 20-byte TCP header and a 20-byte IP header to fir within a 1500-byte Ethernet frame.
 
 A TCP header contains the following parts:
 
@@ -33,15 +33,15 @@ A TCP header contains the following parts:
 |**urgent pointer**|2|only meaningful when the URG flag is set; rarely used|
 
 The nine flag bits are as follows:
-- `SYN`
-- `ACK`
-- `FIN`
-- RST
-- PSH
-- URG
-- ECE
-- CWR
-- NS
+- `SYN` — a request for sequence number synchronisation
+- `ACK` — an acknowledgement that a prior message has been successfully received
+- `FIN` — a request to close the connection
+- `RST`
+- `PSH`
+- `URG`
+- `ECE`
+- `CWR`
+- `NS`
 
 Back up to: [Top](#)
 
