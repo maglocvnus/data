@@ -3,6 +3,7 @@
 - [API gateways](a/API-gateways.md)
 - [data sharing agreements](d/data-sharing-agreements.md)
 - [disk clusters](d/disk-clusters.md)
+- software [environments](e/environments.md) – development, testing, staging, production
 - [event logs](e/event-logs.md)
 - [event sourcing](e/event-sourcing.md)
 - data [governance](g/governance.md)
