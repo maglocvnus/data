@@ -1,6 +1,6 @@
 # The software crisis
 
-It was common in the 1960s and 1970s to talk about a `software crisis`, where the production of software was not meeting the ever-growing demands of the market, or the potential offered. by increasingly powerful hardware.
+It was common in the 1960s and 1970s to talk about a `software crisis`, where the production of software was felt not to be meeting the ever-growing demands of the market, or fulfilling the potential provided by increasingly powerful hardware.
 
 Much commercially produced software was seen to be poor quality, unreliable, delivered late, and with unpredictable costs.
 
