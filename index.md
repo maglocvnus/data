@@ -14,8 +14,10 @@
 - [performance tuning](p/performance-tuning.md)
 - data [quality](q/quality.md)
 - [service meshes](s/service-meshes.md)
+- the [software crisis](s/software-crisis.md)
 - data [stewards](s/stewards.md)
 - [strangler fig](s/strangler-fig.md)
+- [structured programming](s/structured-programming.md)
 - [Transmission Control Protocol](t/TCP.md) (TCP)
 
 
