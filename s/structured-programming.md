@@ -17,6 +17,33 @@ Structured programming emerged during the 1960s, with the move away from using m
 - 1970: Niklaus Wirth designed the Pascal language in order to teach structured programming principles.
 - 1972: Dijkstra, C.A.R. Hoare and Ole-Johan Dahl published the influential book *Structured Programming*.
 
+
+## Iteration
+
+### Java
+
+```
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+```
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+```
+String[] names = {"Alice", "Bob", "Charlie"};
+for (String name : names) {
+    System.out.println(name);
+}
+```
+
+
 ----
 
 Back up to: [Maglocvnus](../index.md)
