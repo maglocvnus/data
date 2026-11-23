@@ -21,11 +21,13 @@ graph TD
   a((A))
   b((B))
   c((C))
+  d((D))
   r -- in --> x
   t -- in --> x
   x -- uses --> z
   w -- imports --> a
   y -- imports --> a
+  t -- exports --> d
   t -- exports --> a
   x -- exports --> b
   x -- exports --> c
