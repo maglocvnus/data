@@ -16,7 +16,7 @@ graph TD
   y[Y]
   z[Z]
   w[W]
-  a(A)
+  a((A))
   b(B)
   c(C)
   x -- uses --> z
