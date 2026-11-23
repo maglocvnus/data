@@ -16,9 +16,9 @@ graph TD
   y[Y]
   z[Z]
   w[W]
-  a([A])
-  b([B])
-  c([C])
+  a(A)
+  b(B)
+  c(C)
   x -- uses --> z
   w -- imports --> a
   y -- imports --> a
