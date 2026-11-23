@@ -40,7 +40,15 @@ In this diagram:
   - Modules Y and W import resource A from module X.
   - Module X uses module Z.
 
-
+Some principles of good modularisation:
+- **information hiding**:
+  - The interface of a module must be very carefully separated from its body.
+  - The interface should not expose too much or too little information.
+- **low coupling** and **high cohesion**:
+  - Resources that are often used together should be in the same module.
+  - Resources that are rarely used together should be in different modules.
+- **design-for-change**:
+  - Modules should be designed from the outset with possible future changes in mind.
 
 
 ----
