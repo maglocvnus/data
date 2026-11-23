@@ -26,7 +26,7 @@ graph TD
   x -- uses --> z
   w -- imports --> a
   y -- imports --> a
-  x -- exports --> a
+  t -- exports --> a
   x -- exports --> b
   x -- exports --> c
 
