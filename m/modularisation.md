@@ -12,9 +12,13 @@ There are two main ways of designing a modular software architecture:
 
 ```mermaid
 graph TD
+  
   moduleX -- uses --> moduleZ
-  moduleW -- uses --> moduleX
-  moduleY -- uses --> moduleX
+  moduleW -- imports --> resourceA
+  moduleY -- imports --> resourceB
+  moduleX -- exports --> resourceA
+  moduleX -- exports --> resourceB
+  moduleX -- exports --> resourceC
 
 ```
 
