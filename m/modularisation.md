@@ -32,11 +32,11 @@ graph TD
 In this diagram:
 - X, Y, Z, W are software **modules**.
 - A, B and C are software **resources** – functions, variables, data types etc.
-- A module **exports** certain resources, making them available to be re-used by other modules
+- A module **exports** certain resources, making them available to be re-used by other modules.
   - Here, module X exports resources A, B and C.
-- The set of resources exported by a module are collectively known as its **interface**
+- The set of resources exported by a module are collectively known as its **interface**.
   - Here, resources A, B and C together form the interface of module X.
-- A module can **import** a resource which is exported by another module. In other words, a module can **use** another module
+- A module can **import** a resource which is exported by another module. In other words, a module can **use** another module.
   - Modules Y and W import resource A from module X.
   - Module X uses module Z.
 
