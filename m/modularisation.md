@@ -15,7 +15,7 @@ graph TD
   
   moduleX -- uses --> moduleZ
   moduleW -- imports --> resourceA
-  moduleY -- imports --> resourceB
+  moduleY -- imports --> resourceA
   moduleX -- exports --> resourceA
   moduleX -- exports --> resourceB
   moduleX -- exports --> resourceC
