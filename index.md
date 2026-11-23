@@ -10,6 +10,7 @@
 - [indices](i/indices.md)
 - [Internet Protocol](i/IP.md) (IP)
 - [microservice architectures](m/microservice-architectures.md)
+- [modularisation](m/modularisation.md)
 - [partitions](p/partitions.md)
 - [performance tuning](p/performance-tuning.md)
 - data [quality](q/quality.md)
