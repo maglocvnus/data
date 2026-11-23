@@ -12,7 +12,9 @@ There are two main ways of designing a modular software architecture:
 
 ```mermaid
 graph TD
-  module-1 --> module-2
+  moduleX -- uses --> moduleZ
+  moduleW -- uses --> moduleX
+  moduleY -- uses --> moduleX
 
 ```
 
