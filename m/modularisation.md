@@ -22,6 +22,7 @@ graph TD
   b((B))
   c((C))
   d((D))
+  r -- imports --> d
   r -- in --> x
   t -- in --> x
   x -- uses --> z
