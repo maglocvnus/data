@@ -50,6 +50,28 @@ Some principles of good modularisation:
 - **design-for-change**:
   - Modules should be designed from the outset with possible future changes in mind.
 
+## Example module
+
+### Module interface
+
+```
+module interface ComplexNumbers
+import scans, printf from stdio
+
+typedef hidden Complex;
+typedef enum {RPIP, MODARG} Representation;
+
+Complex SumCompl(Complex Add1, Complex Add2);
+
+Complex MultCompl(Complex Mult1, Complex Mult2);
+
+void WriteCompl(Complex Par1, Representation Rep);
+
+void ReadCompl(Complex *Par, Representation Rep);
+
+```
+
+### Module body
 
 ----
 
