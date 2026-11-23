@@ -10,6 +10,13 @@ There are two main ways of designing a modular software architecture:
 - **top-down refinement**
 - **bottom-up aggregation**.
 
+```mermaid
+graph TD
+  module-1 --> module-2
+
+```
+
+
 
 ----
 
