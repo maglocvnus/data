@@ -10,6 +10,8 @@ There are two main ways of designing a modular software architecture:
 - **top-down refinement**
 - **bottom-up aggregation**.
 
+The following diagram represents a modular software system:
+
 ```mermaid
 graph TD
   x[X]
@@ -26,6 +28,13 @@ graph TD
   x -- exports --> b
   x -- exports --> c
 ```
+
+In this diagram:
+- X, Y, Z, W are software **modules**.
+- A, B and C are software **resources** – functions, variables, data types etc.
+- A module **exports** certain resources, making them available to be re-used by other modules.
+- The set of resources exported by a module are collectively known as its **interface**.
+- A module can **import** a resource which is exported by another module. In other words, a module can **use** another module.
 
 
 
