@@ -8,6 +8,11 @@ There are two main kinds of cryptographic algorithm:
 - an `unkeyed` cryptographic algorithm takes just the one input, the data itself
   - hashing algorithms
 
+AES - symmetric block encryption algorithm
+AES-128
+AES-192
+AES-256
+
 
 The main applications of cryptography are:
 - encryption – converting readable information into an unreadable form so that only authorised parties can read it
