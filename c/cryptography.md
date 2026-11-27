@@ -38,6 +38,26 @@ How do you generate a public key from a private key?
 3. private key calculated using p and q using modular arithmetic.
 4. It is compyrarionally unfeasible to recover the private key from the public key, because of the difficulty of factoring a very large integer back into its prime factors.
 
+Generating a 2048-bit RSA private key:
+
+```
+> openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private.pem
+```
+
+Deriving the corresponding public key:
+
+```
+> openssl pkey -in private.pem -pubout -out public.pem
+```
+
+Alternatively:
+
+```
+ssh-keygen -t rsa -b 3072
+```
+This creates both 
+
+
 
 
 key agreement?
