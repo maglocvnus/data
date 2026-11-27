@@ -19,6 +19,30 @@ The Secure Hash Algorithms (SHA) are examples of unkeyed cryptographic algorithm
 
 Public key encryption algorithms? RSA?
 
+RSA is a public key encryption algorithms, using two mathematically related keys (2048 or 3072 bits long, very slow compared to AES). These keys make up an asymmetric pair.
+
+public key - used to encrypt data, can be given to anyone
+
+private key - kept secret and used to decrypt data
+
+1. I want you to send me data securely.
+2. I send you my public key (non-securely).
+3. You use it to encrypt the data.
+4. You send the encrypted data to me.
+5. I decrypt it using my private key.
+
+How do you generate a public key from a private key?
+
+1. Randomly choose two very large prime numbers p and q.
+2. public key = pq plus a public exponent
+3. private key calculated using p and q using modular arithmetic.
+4. It is compyrarionally unfeasible to recover the private key from the public key, because of the difficulty of factoring a very large integer back into its prime factors.
+
+
+
+key agreement?
+
+Use RSA to agree shared key, then use AES to encrypt/decrypt data. 
 
 ----
 
