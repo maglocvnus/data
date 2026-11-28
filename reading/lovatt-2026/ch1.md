@@ -26,13 +26,17 @@ In other words:
 
 A system can suffer from (behavioural) **problems** – either it does the wrong thing, or it does the right thing badly.
 
+There are two main approaches to solving a system’s behavioural problems by modifying it:
+- **tactical** – short-term, narrowly focussed ‘quick fixes’
+- **strategic** (architectural) – ‘big picture’.
 
+
+mmmm:
 Architecture is an approach to solving problems, involving:
 - How can the problem be solved **conceptually**? What is the ‘big picture’?
 - How can the problem be solved **logically**? How can it be modelled – broken down into components and their interactions?
 - How can the problem be solved **physically**? What changes in the real world are required to move (perhaps incrementally) from problem to solution?
 
-The opposite of a **strategic** architectural approach to solving a problem is a **tactical** ‘quick fix’ approach – short-term and narrowly focussed.
 
 Back to: [Top](#)
 
