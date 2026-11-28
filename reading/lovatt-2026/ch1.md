@@ -14,25 +14,25 @@ Contents:
 
 ## 1.1. Architecture
 
+`ISO/IEC/IEEE 42010` (*Systems and software engineering – Architecture description*) is an international standard for architecture descriptions of systems:
+- **Architecture** refers to the inherent structure and behaviour of a **system** (which may be present as a result of design and/or evolution).
+- An **architectural description** is a document describing the architecture (structure and behaviour) of a system.
+
+In other words:
+- Every system has an (inherent, abstract) architecture, involving:
+  - (external) **behaviour** – what the system does (in its environment)
+  - (internal) **structure** – how the system does what it does; what are its sub-systems, and how do they interact
+- This architecture can be documented.
+
+A system can suffer from (behavioural) **problems** – either it does the wrong thing, or it does the right thing badly.
+
+
 Architecture is an approach to solving problems, involving:
 - How can the problem be solved **conceptually**? What is the ‘big picture’?
 - How can the problem be solved **logically**? How can it be modelled – broken down into components and their interactions?
 - How can the problem be solved **physically**? What changes in the real world are required to move (perhaps incrementally) from problem to solution?
 
 The opposite of a **strategic** architectural approach to solving a problem is a **tactical** ‘quick fix’ approach – short-term and narrowly focussed.
-
-A definition of architecture (based on ISO 42010:2011 and TOGAF 9.2:2018):
-
-> **Architecture** is the inherent structure and behaviour of a system which may be present as a result of design and/ore evolution.
->
-> An **architectural description** is a document describing the structure and behaviour of a system.
-
-Architecture can also be used to refer to a set of activities.
-
-
-Every system has an architecture.
-Architecture is an abstraction of the structure and behaviour of a system. 
-
 
 Back to: [Top](#)
 
