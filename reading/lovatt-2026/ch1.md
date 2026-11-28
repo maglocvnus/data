@@ -20,23 +20,36 @@ Contents:
 
 In other words:
 - Every system has an (inherent, abstract) architecture, involving:
-  - (external) **behaviour** – what the system does (in its environment)
-  - (internal) **structure** – how the system does what it does; what are its sub-systems, and how do they interact
-- This architecture can be documented – **conceptually**, **logically**, and **physically**.
+  - (external) **behaviour** – what the system does (in its environment); its functionality; what its effects are;
+  - (internal) **structure** – how the system does what it does; what its components (sub-systems) are, and how they interact
+- This architecture can be documented (or ‘modelled’) – **conceptually**, **logically**, and **physically**.
 
-A system can suffer from (behavioural) **problems** – either it does the wrong thing, or it does the right thing badly.
+A system can suffer from (behavioural) **problems** – either it does the wrong thing, or it does the right thing badly. Problems can involve **issues**, **risks** and **opportunities**.
 
 There are two main approaches to solving a system’s behavioural problems by modifying it:
-- **tactical** – short-term, narrowly focussed ‘quick fixes’
-- **strategic** (architectural) – ‘big picture’.
+- **tactical** – short-term, narrowly focussed, ‘quick fixes’
+- **strategic** (architectural) – ‘big picture’, target architecture.
+
+Architecture depends on treating organisations and solutions as systems with components that interact with each other to exhibit functionality. 
 
 Back to: [Top](#)
 
 ## 1.2. Solution architecture
 
+A solution is a system that solves a problem.
+
+A solution addresses a business problem (need, risk, opportunity).
+
+A blueprint documents as solution-as-system. It is an action plan.
+
+A (business) problem statement.
+
+
 Back to: [Top](#)
 
 ## 1.3. Three levels of a business or organisation
+
+
 
 Back to: [Top](#)
 
