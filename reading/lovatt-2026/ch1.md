@@ -14,6 +14,25 @@ Contents:
 
 ## 1.1. Architecture
 
+Architecture is an approach to solving problems, involving:
+- How can the problem be solved **conceptually**? What is the ‘big picture’?
+- How can the problem be solved **logically**? How can it be modelled – broken down into components and their interactions?
+- How can the problem be solved **physically**? What changes in the real world are required to move (perhaps incrementally) from problem to solution?
+
+The opposite of a **strategic** architectural approach to solving a problem is a **tactical** ‘quick fix’ approach – short-term and narrowly focussed.
+
+A definition of architecture (based on ISO 42010:2011 and TOGAF 9.2:2018):
+
+> **Architecture** is the inherent structure and behaviour of a system which may be present as a result of design and/ore evolution.
+>
+> An **architectural description** is a document describing the structure and behaviour of a system.
+
+Architecture can also be used to refer to a set of activities.
+
+
+Every system has an architecture.
+Architecture is an abstraction of the structure and behaviour of a system. 
+
 
 Back to: [Top](#)
 
