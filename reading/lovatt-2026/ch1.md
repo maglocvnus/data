@@ -22,21 +22,13 @@ In other words:
 - Every system has an (inherent, abstract) architecture, involving:
   - (external) **behaviour** – what the system does (in its environment)
   - (internal) **structure** – how the system does what it does; what are its sub-systems, and how do they interact
-- This architecture can be documented.
+- This architecture can be documented – **conceptually**, **logically**, and **physically**.
 
 A system can suffer from (behavioural) **problems** – either it does the wrong thing, or it does the right thing badly.
 
 There are two main approaches to solving a system’s behavioural problems by modifying it:
 - **tactical** – short-term, narrowly focussed ‘quick fixes’
 - **strategic** (architectural) – ‘big picture’.
-
-
-mmmm:
-Architecture is an approach to solving problems, involving:
-- How can the problem be solved **conceptually**? What is the ‘big picture’?
-- How can the problem be solved **logically**? How can it be modelled – broken down into components and their interactions?
-- How can the problem be solved **physically**? What changes in the real world are required to move (perhaps incrementally) from problem to solution?
-
 
 Back to: [Top](#)
 
